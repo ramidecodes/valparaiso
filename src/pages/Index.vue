@@ -6,19 +6,21 @@
     </valpo-splash>
 
     <valpo-content id="about" class="about flex-rows" v-lazy:background-image="images.boat">
-      <h3>Adventures of the Valparaíso</h3>
-      <p>
-        Pirates are typically known for looting, raiding and wrecking wherever they went. However, did you know that pirates were also the revolutionaries, the progressives, the explorers? They challenged the existing authority, sailed away from mainstream society and created their own alternative culture and socio-economic structure.
-      </p>
-      <p>
-        As pirates of the Valparaíso, we don’t loot, raid, or wreck. We are here to share, to love, and to connect people. Our organisation is about creating appealing and sustainable solutions for challenging the mainstream consumer culture, while providing a bold alternative of thinking about trade and economics.
-      </p>
-      <p>
-        To us, this is the real essence of piracy: the courage to branch out from established societal norms to explore and create progressive, and exciting pathways.
-      </p>
-      <p class="cta">
-        <valpo-button class="button cerulean" label="Read more about us"></valpo-button>
-      </p>
+      <h1>Adventures of the Valparaíso</h1>
+      <valpo-two-col-section>
+        <p>
+          We are a ship-based community passionate about expanding our on-board culture of sustainability and creativity. Since 2013, our foundation has involved over 500 international volunteers in our cana based in Amsterdam, our hub for new ideas around community and creative concepts.
+          The success of this endeavour has strengthened our belief in a people-centric marketplace and grown our passion for a greater adventure.
+        </p>
+        <p>
+          We are now determined, with support from our homebase in the Netherlands, to equip a larger, seaworthy ship and crew for an international journey of art, music, connection and trade. This transformation and voyage will, in collaboration with our sponsors and volunteers, exhibit the exchange of ideas, skills, stories and goods with local communities and embody our belief that it is only with each of our individual stories that we are able to tell one, whole story together: the story of the <strong>Adventures of the Valparaiso</strong>.
+        </p>
+        <p class="cta">
+          <router-link :to="{ name: 'About', params: { focus: 'about' }}">
+            <valpo-button class="button terracota" label="Read more about us"></valpo-button>
+          </router-link>
+        </p>
+    </valpo-two-col-section>
     </valpo-content>
 
     <valpo-content id="involved" class="involved flex-rows fixed-pseudo" v-lazy:background-image="images.hand">
@@ -29,9 +31,10 @@
           </figure>
         </valpo-list-item>
       </valpo-list>
+      <p class="cta lead-paragraph">A ship-based community working on new sustainable solutions.</p>
       <p class="cta">
         <router-link :to="{ name: 'Volunteer', params: { focus: 'volunteer' }}">
-          <valpo-button class="button robroy large" label="Get involved!"></valpo-button>
+          <valpo-button class="button terracota large" label="Get involved!"></valpo-button>
         </router-link>
       </p>
     </valpo-content>
@@ -55,6 +58,7 @@ import ValpoButton from "@/components/ValpoButton";
 import ValpoList from "@/components/ValpoList";
 import ValpoListItem from "@/components/ValpoListItem";
 import ValpoEvents from "@/components/ValpoEvents";
+import ValpoTwoColSection from "@/components/ValpoTwoColSection"
 
 import logo from "../assets/images/logo-valparaiso.svg";
 import pig from "../assets/images/image-pig.jpg";
@@ -73,7 +77,8 @@ export default {
     ValpoButton,
     ValpoList,
     ValpoListItem,
-    ValpoEvents
+    ValpoEvents,
+    ValpoTwoColSection
   },
   data: () => ({
     images: { logo, pig, boat, hand },

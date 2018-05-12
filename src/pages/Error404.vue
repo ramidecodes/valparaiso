@@ -2,85 +2,58 @@
   <main role="main" id="index">
 
     <valpo-splash class="splash" :video="video" :image="images.giuliana">
+      <!-- ~ we like acid yay ~ -->
       <img v-lazy="images.logo" class="logo" alt="Adventures of the Valparaiso" /><br>
-      ~ we like acid yay ~
     </valpo-splash>
 
-    <valpo-content id="volunteer" class="volunteer flex-rows align-center">
+    <valpo-content id="error404" class="error404 flex-rows align-center">
       <h3>
-        Become a volunteer
+        Erro 404 - Treasure not found
       </h3>
-      <p>
-        We are determined, with support from our homebase in the Netherlands, to equip a larger and seaworthy ship for an international journey of art, sustainability, connection, education, and technological innovation. This all comes together to promote an alternative and people-centric way of trading. One that we call the New Pirate Economy.
-      </p>
-      <valpo-list class="icons flex-center">
-        <valpo-list-item v-for="(item) in tasks" :key="item.icon">
-          <figure>
-            <img v-lazy="item.icon" :alt="item.alt">
-            <figcaption>{{ item.alt }}</figcaption>
-          </figure>
-        </valpo-list-item>
-      </valpo-list>
-      <h3 id="projects" class="projects">
-        Current projects
-      </h3>
-      <p>
-        We are determined, with support from our homebase in the Netherlands, to equip a larger and seaworthy ship for aninternational journey of art, sustainability, connection, education, and technological innovation. This all comes together to promote an alternative and people-centric way of trading. One that we call the New Pirate Economy.
-      </p>
-      <valpo-list class="project-items flex-center">
-        <valpo-list-item v-for="(item) in projects" :key="item.icon">
-          <figure>
-            <img v-lazy="item.image" :alt="item.title">
-            <figcaption>{{ item.title }}</figcaption>
-          </figure>
-        </valpo-list-item>
-      </valpo-list>
+      <valpo-two-col-section>
+        <p>Valparaiso is a city located on the coastline of Chile, between the Andes and the Pacific Ocean. It was named afterby the Spanish conquerors when their ships moored upon the shores over five hundred years ago. It was the closest port city that lay along the path to a place which was considered paradise by these sailors after a long enduring journey.
+        </p>
+        <p>Ulysses, a dutch traveler, came to the city by coincidence. With his motorcycle left broken on the roadside in Argentina, he resorted to hitchhiking to continue his journey and found his way to Valparaiso. As he travelled through the rough exterior he began to look more into the interior of the city. He fell in love with the bohemian and artistic winds within the city and found a limitless source of inspiration. Like dirty nails and worn hands, the city had its own beauty beneath the surface.
+        </p>
+      </valpo-two-col-section>
     </valpo-content>
     <valpo-content id="form" class="form flex-rows fixed-pseudo" v-lazy:background-image="images.beach">
       <div class="message">
         <h3>Message in a bottle</h3>
-          <p>
-            Want to get in touch, have a question or just want to say hi?<br>
-            We're always on the lookout for new volunteers and ideas!
-            <br><br>
-          </p>
-          <p>
-            <valpo-button class="button cerulean" label="Send us an email!"></valpo-button>
-          </p>
-        </div>
-      </valpo-content>
+        <p>
+          Want to get in touch, have a question or just want to say hi?<br>
+          We're always on the lookout for new abouts and ideas!
+          <br><br>
+        </p>
+        <p>
+          <valpo-button class="button terracota" label="Send us an email!"></valpo-button>
+        </p>
+      </div>
+    </valpo-content>
   </main>
 </template>
 
 <script>
 import ValpoSplash from "@/components/ValpoSplash";
 import ValpoContent from "@/components/ValpoContent";
-import ValpoList from "@/components/ValpoList";
-import ValpoListItem from "@/components/ValpoListItem";
 import ValpoButton from "@/components/ValpoButton";
+import ValpoTwoColSection from "@/components/ValpoTwoColSection"
 
 import logo from "../assets/images/logo-valparaiso.svg";
 import giuliana from "../assets/images/image-giuliana.jpg";
 import beach from "../assets/images/image-beach.jpg";
-
-import iconBuilding from "../assets/images/icon-building.svg";
-import iconDesign from "../assets/images/icon-design.svg";
-import iconVideo from "../assets/images/icon-video.svg";
-import iconMarketing from "../assets/images/icon-marketing.svg";
-import iconSocial from "../assets/images/icon-social.svg";
 
 import light from "../assets/images/image-light.jpg";
 import qr from "../assets/images/image-qr.jpg";
 import birds from "../assets/images/image-birds.jpg";
 
 export default {
-  name: "Volunteer",
+  name: "Error",
   components: {
     ValpoSplash,
     ValpoContent,
-    ValpoList,
-    ValpoListItem,
-    ValpoButton
+    ValpoButton,
+    ValpoTwoColSection
   },
   data: () => ({
     images: { logo, giuliana, beach },
@@ -101,12 +74,7 @@ export default {
         icon: iconVideo,
         alt: "Photography / Video"
       },
-      {
-        icon: iconMarketing,
-        alt: "Marketing"
-      },
-      {
-        icon: iconSocial,
+      {onSocial,
         alt: "Social Media"
       }
     ],
@@ -135,7 +103,7 @@ export default {
     width: 90%;
   }
 }
-.volunteer {
+.error404 {
   background: linear-gradient(
     to bottom,
     var(--color-ocean) 0%,

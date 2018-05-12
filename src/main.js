@@ -15,8 +15,8 @@ import config from "./config";
 Vue.config.productionTip = false;
 
 new Vue({
-  name: config.site.name,
   el: "#site",
+  name: config.site.name,
   // store,
   router,
   render: h => h(App)

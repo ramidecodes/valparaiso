@@ -3,7 +3,7 @@
     <p>
       Stichting Adventures of the Valparaiso.<br>
       NL86TRIO2205 4507 27
-      <br>&copy; 2017 All rights reserved.<br><br>
+      <br>&copy; 2018 All rights (and lefts) reserved.<br><br>
       Site by <router-link :to="{ name: 'history', params: { focus: 'crew' }}" title="Art &amp; Design">Alexis Camejo</router-link> &amp; <router-link :to="{ name: 'history', params: { focus: 'crew' }}" title="Development">Timo Heddes</router-link>
     </p>
     <p class="align-center">
@@ -13,7 +13,7 @@
     <p class="align-center">
       Partners:
     </p>
-  </footer>  
+  </footer>
 </template>
 
 <script>

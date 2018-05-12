@@ -2,8 +2,11 @@
   --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "BentonSans",
     Helvetica, Arial, sans-serif;
   --font-size: 16px;
+  --lead-size: 24px;
 
-  --wrapper-width: 1366px;
+  // --wrapper-width: 1366px;
+  // What's the best way to avoid the original boxed layout?
+  --wrapper-width: v-width;
 
   --spacing: 0rem;
   --line-height: 1.5;
@@ -11,6 +14,7 @@
   --tracking-medium: 0.5rem;
   --tracking-large: 0.8rem;
   --spacing-small: 0.1em;
+  --section-bottom-margin: 2rem;
 
   --color-light: #fcfefe;
   --color-dark: #000;

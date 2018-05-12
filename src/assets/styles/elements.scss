@@ -16,6 +16,7 @@
   }
 
   &:hover {
+    box-shadow: 0px 1px 6px #222;
     border-color: transparent !important;
   }
   &:active,
@@ -27,12 +28,14 @@
   // Modifiers
   &.cerulean {
     background: var(--color-cerulean);
-    border-color: #7fd4da;
     color: var(--color-light);
   }
   &.robroy {
     background: var(--color-robroy);
-    border-color: #fab54d;
+    color: var(--color-light);
+  }
+  &.terracota {
+    background: var(--color-terracota);
     color: var(--color-light);
   }
   &.large {
@@ -45,4 +48,9 @@
     font-weight: 600;
     outline: none;
   }
+}
+.lead-paragraph{
+  color: var(--color-lagoon);
+  font-size: var(--lead-size);
+  font-weight: bold;
 }
