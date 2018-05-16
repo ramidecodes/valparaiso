@@ -1,63 +1,33 @@
 <template>
   <main role="main" id="index">
 
-    <valpo-splash class="splash" :video="video" :image="images.giuliana">
+    <valpo-splash class="splash" :image="images.giuliana">
       <img v-lazy="images.logo" class="logo" alt="Adventures of the Valparaiso" /><br>
-      <!-- ~ we like acid yay ~ -->
     </valpo-splash>
 
-    <valpo-content id="vision" class="vision flex-rows align-center">
-      <h3>
-        History of the Valparaiso
-      </h3>
+    <valpo-content id="partnership" class="partnership flex-rows align-center">
+      <h1>Get Involved!</h1>
       <valpo-two-col-section>
-        <p>Valparaiso is a city located on the coastline of Chile, between the Andes and the Pacific Ocean. It was named afterby the Spanish conquerors when their ships moored upon the shores over five hundred years ago. It was the closest port city that lay along the path to a place which was considered paradise by these sailors after a long enduring journey.
+        <p>
+          We have a brave, collective vision. A vision of a sustainable future; of a fair, people-oriented marketplace driven by human connection and the stories that we can only create together.
         </p>
-        <p>Ulysses, a dutch traveler, came to the city by coincidence. With his motorcycle left broken on the roadside in Argentina, he resorted to hitchhiking to continue his journey and found his way to Valparaiso. As he travelled through the rough exterior he began to look more into the interior of the city. He fell in love with the bohemian and artistic winds within the city and found a limitless source of inspiration. Like dirty nails and worn hands, the city had its own beauty beneath the surface.
+        <p>
+          By hosting travellers, participating in international festivals, and producing online content to share our stories, we are quickly spreading our message all over the world.
+        </p>
+        <p>
+          And now we’re looking for a ship, be it abandoned or donated, to spread our message even further across the globe. We will refit it through creativity, skill and sustainable solutions to transform into unique, renewable community home.
+        </p>
+        <p>
+          We’re looking for partners who want to be a part of this journey, not just in our practical support stages, but also in the creative initiatives.
         </p>
       </valpo-two-col-section>
-      <h4>His compass turned upside down</h4>
-      <valpo-two-col-section>
-        <p>Art and culture was very much alive and growing, creating a place of collaboration for creative minds and free thinking people. It was the people that were breathing life into the old streets and dying walls. Valparaiso was referred to as the road to paradise. However it has its own sense of paradise, one that comes from the connections of those living in the city. The sense of satisfaction from a hard day's work or working together to achieve something beautiful is what creates the rich soul of the city.
-        </p>
-        <p>Adventures of the Valparaiso is a journey along the road to paradise. It is an art studio above the hull of a hundred years old barge that has had more people helping on board than scratches in its paint. The fuel that keeps this ship and its projects going is the inspiration of the old port city it is named after and the sign you see in the window when you first step on board that reads. “Happiness is the journey not the destination.”
-        </p>
-      </valpo-two-col-section>
-      <valpo-list class="icons flex-center">
-        <valpo-list-item v-for="(item) in tasks" :key="item.icon">
-          <figure>
-            <img v-lazy="item.icon" :alt="item.alt">
-            <figcaption>{{ item.alt }}</figcaption>
-          </figure>
-        </valpo-list-item>
-      </valpo-list>
-      <h3 id="projects" class="projects">
-        Current projects
-      </h3>
-      <p>
-        We are determined, with support from our homebase in the Netherlands, to equip a larger and seaworthy ship for aninternational journey of art, sustainability, connection, education, and technological innovation. This all comes together to promote an alternative and people-centric way of trading. One that we call the New Pirate Economy.
+      <p class="lead-paragraph">
+        Please contact our crew if you are interested or would like to learn more.
       </p>
-      <valpo-list class="project-items flex-center">
-        <valpo-list-item v-for="(item) in projects" :key="item.icon">
-          <figure>
-            <img v-lazy="item.image" :alt="item.title">
-            <figcaption>{{ item.title }}</figcaption>
-          </figure>
-        </valpo-list-item>
-      </valpo-list>
-    </valpo-content>
-    <valpo-content id="form" class="form flex-rows fixed-pseudo" v-lazy:background-image="images.beach">
-      <div class="message">
-        <h3>Message in a bottle</h3>
-        <p>
-          Want to get in touch, have a question or just want to say hi?<br>
-          We're always on the lookout for new visions and ideas!
-          <br><br>
-        </p>
-        <p>
-          <valpo-button class="button terracota" label="Send us an email!"></valpo-button>
-        </p>
-      </div>
+      <p>
+        <valpo-button class="button terracota" label="Send us an email!"></valpo-button>
+      </p>
+
     </valpo-content>
   </main>
 </template>
@@ -85,7 +55,7 @@ import qr from "../assets/images/image-qr.jpg";
 import birds from "../assets/images/image-birds.jpg";
 
 export default {
-  name: "About",
+  name: "Partnership",
   components: {
     ValpoSplash,
     ValpoContent,
@@ -147,7 +117,7 @@ export default {
     width: 90%;
   }
 }
-.vision {
+.partnership {
   background: linear-gradient(
     to bottom,
     var(--color-ocean) 0%,

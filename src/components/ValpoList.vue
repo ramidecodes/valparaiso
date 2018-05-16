@@ -12,6 +12,7 @@ export default {
 
 <style lang="scss">
 .valpo-list {
+  margin: 4em 0;
   &:hover li:not(:hover) {
     opacity: 0.8;
     filter: grayscale(80%);

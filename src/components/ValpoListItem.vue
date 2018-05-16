@@ -1,7 +1,7 @@
 <template>
   <li class="valpo-list-item">
     <slot></slot>
-  </li>  
+  </li>
 </template>
 
 <script>

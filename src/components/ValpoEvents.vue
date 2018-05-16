@@ -1,6 +1,6 @@
 <template>
-  <ul class="events-list">
-    <li class="event" v-for="(event, index) in events" :key="index" v-link="{ url: event.url, target: '_blank' }">
+  <ul class="events-list flex-center">
+    <li class="event flex-child" v-for="(event, index) in events" :key="index" v-link="{ url: event.url, target: '_blank' }">
       <h4 class="event-title">
         {{ event.title }}
           <span class="event-date">
@@ -14,12 +14,12 @@
         <figcaption class="event-text">
           {{ event.body }}<br><br>
             <p class="event-cta align-right">
-              <valpo-button class="button robroy small" :label="`Join this ${event.type}`"></valpo-button>
+              <valpo-button class="button terracota small" :label="`Join this ${event.type}`"></valpo-button>
             </p>
           </figcaption>
         </figure>
       </li>
-  </ul>  
+  </ul>
 </template>
 
 <script>
@@ -80,7 +80,7 @@ export default {
     cursor: pointer;
     list-style-type: none;
     margin-bottom: calc(var(--tracking-large) * 2);
-    max-width: 800px;
+    max-width: 486px;
     position: relative;
     text-align: left;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -96,7 +96,7 @@ export default {
       font-family: "BentonSans";
       font-size: 0.9rem;
       letter-spacing: initial;
-      padding: 0.53em 0.7em;
+      padding: 1.2em 0.7em;
       position: absolute;
       right: 0;
       top: 0;
@@ -111,11 +111,12 @@ export default {
       border-top-right-radius: 3px;
       color: var(--color-ocean);
       font-size: 1.3rem;
-      font-weight: 400;
+      font-weight: bold;
       left: 0;
       letter-spacing: 1px;
       overflow: hidden;
-      padding: 0.15em 1em 0.1em 1em;
+      padding: 0.5em 1em 0.5em 1em;
+      text-align: left;
       position: absolute;
       top: 0;
       width: 100%;

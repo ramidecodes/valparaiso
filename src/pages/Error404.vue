@@ -8,7 +8,7 @@
 
     <valpo-content id="error404" class="error404 flex-rows align-center">
       <h3>
-        Erro 404 - Treasure not found
+        Error 404 - Treasure not found
       </h3>
       <valpo-two-col-section>
         <p>Valparaiso is a city located on the coastline of Chile, between the Andes and the Pacific Ocean. It was named afterby the Spanish conquerors when their ships moored upon the shores over five hundred years ago. It was the closest port city that lay along the path to a place which was considered paradise by these sailors after a long enduring journey.
@@ -60,38 +60,7 @@ export default {
     video: {
       src: "https://fat.gfycat.com/HighlevelZestyAxolotl.webm",
       loop: true
-    },
-    tasks: [
-      {
-        icon: iconBuilding,
-        alt: "Building / Repairing"
-      },
-      {
-        icon: iconDesign,
-        alt: "Design"
-      },
-      {
-        icon: iconVideo,
-        alt: "Photography / Video"
-      },
-      {onSocial,
-        alt: "Social Media"
-      }
-    ],
-    projects: [
-      {
-        image: light,
-        title: "We're upgrading our ship!"
-      },
-      {
-        image: qr,
-        title: "The pirate app"
-      },
-      {
-        image: birds,
-        title: "Into the Woods festival"
-      }
-    ]
+    }
   })
 };
 </script>

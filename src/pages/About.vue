@@ -1,7 +1,7 @@
 <template>
   <main role="main" id="index">
 
-    <valpo-splash class="splash" :video="video" :image="images.giuliana">
+    <valpo-splash class="splash" :image="images.about">
       <!-- ~ we like acid yay ~ -->
       <img v-lazy="images.logo" class="logo" alt="Adventures of the Valparaiso" /><br>
     </valpo-splash>
@@ -20,19 +20,20 @@
       <valpo-two-col-section>
         <p>Art and culture was very much alive and growing, creating a place of collaboration for creative minds and free thinking people. It was the people that were breathing life into the old streets and dying walls. Valparaiso was referred to as the road to paradise. However it has its own sense of paradise, one that comes from the connections of those living in the city. The sense of satisfaction from a hard day's work or working together to achieve something beautiful is what creates the rich soul of the city.
         </p>
-        <p>Adventures of the Valparaiso is a journey along the road to paradise. It is an art studio above the hull of a hundred years old barge that has had more people helping on board than scratches in its paint. The fuel that keeps this ship and its projects going is the inspiration of the old port city it is named after and the sign you see in the window when you first step on board that reads. <quote>  “Happiness is the journey not the destination.”</quote>
+        <p>Adventures of the Valparaiso is a journey along the road to paradise. It is an art studio above the hull of a hundred years old barge that has had more people helping on board than scratches in its paint. The fuel that keeps this ship and its projects going is the inspiration of the old port city it is named after and the sign you see in the window when you first step on board that reads. <q>Happiness is the journey not the destination</q>
         </p>
       </valpo-two-col-section>
 
+      <!-- Todo> Create Timeline Component -->
       <section class="timeline">
         <h3>The Timeline</h3>
       </section>
 
-      <h3 id="projects" class="projects">
+      <h3 id="crew" class="crew">
         The Crew
       </h3>
-      <valpo-list class="project-items flex-center">
-        <valpo-list-item v-for="(item) in projects" :key="item.icon">
+      <valpo-list class="crew-members flex-center">
+        <valpo-list-item v-for="(item) in crew" :key="item.icon">
           <figure>
             <img v-lazy="item.image" :alt="item.title">
             <figcaption>{{ item.title }}</figcaption>
@@ -64,19 +65,27 @@ import ValpoListItem from "@/components/ValpoListItem";
 import ValpoButton from "@/components/ValpoButton";
 import ValpoTwoColSection from "@/components/ValpoTwoColSection"
 
+// Images
 import logo from "../assets/images/logo-valparaiso.svg";
-import giuliana from "../assets/images/image-giuliana.jpg";
+import about from "../assets/images/headers/about.jpg"
 import beach from "../assets/images/image-beach.jpg";
-
-import iconBuilding from "../assets/images/icon-building.svg";
-import iconDesign from "../assets/images/icon-design.svg";
-import iconVideo from "../assets/images/icon-video.svg";
-import iconMarketing from "../assets/images/icon-marketing.svg";
-import iconSocial from "../assets/images/icon-social.svg";
 
 import light from "../assets/images/image-light.jpg";
 import qr from "../assets/images/image-qr.jpg";
 import birds from "../assets/images/image-birds.jpg";
+
+// Crew
+import alexis from "../assets/images/crew/Alexis_Camejo_crew.jpg";
+import bolour from "../assets/images/crew/Bolour_Khaz_crew.jpg";
+import brandon from "../assets/images/crew/Brandon_Turner_crew.jpg";
+import david from "../assets/images/crew/David_Delgado_crew.jpg";
+import gabriel from "../assets/images/crew/Gabriel_Busili_crew.jpg";
+import kim from "../assets/images/crew/Kim_Berghout_crew.jpg";
+import margo from "../assets/images/crew/Margo_Muttart_crew.jpg";
+import timothy from "../assets/images/crew/Timothy_Heddes_crew.jpg";
+import ulysses from "../assets/images/crew/Ulysses_Schuitemaker_crew.jpg";
+import vivian from "../assets/images/crew/Vivian_Soneghet_crew.jpg";
+import yoram from "../assets/images/crew/Yoram_crew.jpg";
 
 export default {
   name: "About",
@@ -89,45 +98,54 @@ export default {
     ValpoTwoColSection
   },
   data: () => ({
-    images: { logo, giuliana, beach },
+    images: {
+      logo, about, beach, alexis, bolour, brandon, david, gabriel, kim,
+      margo, timothy, ulysses, vivian, yoram
+    },
     video: {
       src: "https://fat.gfycat.com/HighlevelZestyAxolotl.webm",
       loop: true
     },
-    tasks: [
+    crew: [
       {
-        icon: iconBuilding,
-        alt: "Building / Repairing"
+        image: ulysses,
+        title: "Ulysses Schuitemaker"
       },
       {
-        icon: iconDesign,
-        alt: "Design"
+        image: margo,
+        title: "Margo Muttart"
       },
       {
-        icon: iconVideo,
-        alt: "Photography / Video"
+        image: vivian,
+        title: "Vivian Soneghet"
       },
       {
-        icon: iconMarketing,
-        alt: "Marketing"
+        image: kim,
+        title: "Kim Berghout"
       },
       {
-        icon: iconSocial,
-        alt: "Social Media"
-      }
-    ],
-    projects: [
-      {
-        image: light,
-        title: "We're upgrading our ship!"
+        image: bolour,
+        title: "Bolour Khaz"
       },
       {
-        image: qr,
-        title: "The pirate app"
+        image: brandon,
+        title: "Brandon Turner"
       },
       {
-        image: birds,
-        title: "Into the Woods festival"
+        image: alexis,
+        title: "Alexis Camejo"
+      },
+      {
+        image: david,
+        title: "David Delgado"
+      },
+      {
+        image: yoram,
+        title: "Yoram"
+      },
+      {
+        image: gabriel,
+        title: "Gabriel Busili"
       }
     ]
   })
@@ -135,7 +153,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.splash {
+section.splash {
+  background-position-y: 100%;
   .logo {
     max-width: 400px;
     width: 90%;
@@ -173,10 +192,14 @@ export default {
       }
     }
   }
-  .projects {
+  .crew {
     padding-top: calc(var(--tracking-large) * 5);
   }
-  .project-items {
+  .crew-members {
+    .valpo-list-item {
+      margin: 5vw;
+      max-width: 160px;
+    }
     margin-top: calc(var(--tracking-large) * 2);
     li {
       margin-top: calc(var(--tracking-large) * 1);
@@ -227,6 +250,9 @@ export default {
     position: absolute;
     right: 0;
     width: 100%;
+    h3 {
+      margin-bottom: 1.5em;
+    }
   }
   &:before {
     background: linear-gradient(

@@ -78,4 +78,15 @@ a {
 h1,h2,h3,h4 {
   text-transform: uppercase;
   margin-bottom: 1rem;
+  text-align: center;
+}
+q, blockquote {
+  font-style: italic;
+  font-weight: bold;
+}
+hr {
+  overflow: visible;
+  margin: 2em 0;
+  border: 1px solid white;
+  width: 70%;
 }

@@ -41,10 +41,10 @@
 
     <valpo-content id="events" class="events flex-rows fixed-pseudo">
       <h3 class="slogan">
-        Upcoming events
+        Upcoming events & Festivals
       </h3>
       <p>
-        We are determined, with support from our homebase in the Netherlands, to equip a larger and seaworthy ship for an international journey of art, sustainability, connection, education, and technological innovation. This all comes together to promote an alternative and people-centric way of trading. One that we call <strong>the New Pirate Economy</strong>.
+        Be part of the <strong>New Pirate Economy</strong> by participating in our monthly activities.
       </p>
       <valpo-events></valpo-events>
     </valpo-content>
@@ -58,7 +58,8 @@ import ValpoButton from "@/components/ValpoButton";
 import ValpoList from "@/components/ValpoList";
 import ValpoListItem from "@/components/ValpoListItem";
 import ValpoEvents from "@/components/ValpoEvents";
-import ValpoTwoColSection from "@/components/ValpoTwoColSection"
+import ValpoTwoColSection from "@/components/ValpoTwoColSection";
+import ValpoPartners from "@/components/ValpoPartners";
 
 import logo from "../assets/images/logo-valparaiso.svg";
 import pig from "../assets/images/image-pig.jpg";
@@ -78,7 +79,8 @@ export default {
     ValpoList,
     ValpoListItem,
     ValpoEvents,
-    ValpoTwoColSection
+    ValpoTwoColSection,
+    ValpoPartners
   },
   data: () => ({
     images: { logo, pig, boat, hand },

@@ -67,23 +67,7 @@
 .block {
   display: block;
 }
-.two-col-section {
-  columns: 2 auto;
-  column-gap: 2rem;
-  margin-bottom: var(--section-bottom-margin);
-  h1,h2,h3,h4 {
-    text-align: center;
-    max-width: 100%;
-  }
-  p {
-    text-align: left;
-  }
-}
-@media all and (max-width: 600px){
-  .two-col-section {
-    columns: 1 auto;
-  }
-}
+
 // .two-col-section {
 //   display: flex;
 //   flex-flow: row wrap;

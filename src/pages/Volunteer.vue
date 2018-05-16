@@ -1,9 +1,9 @@
 <template>
   <main role="main" id="index">
 
-    <valpo-splash class="splash" :video="video" :image="images.giuliana">
+    <!-- <valpo-splash class="splash" :video="video" :image="images.giuliana"> -->
+    <valpo-splash class="splash" :image="images.giuliana">
       <img v-lazy="images.logo" class="logo" alt="Adventures of the Valparaiso" /><br>
-      ~ we like acid yay ~
     </valpo-splash>
 
     <valpo-content id="volunteer" class="volunteer flex-rows align-center">

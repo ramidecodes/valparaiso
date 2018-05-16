@@ -14,12 +14,22 @@ export default {
 .content {
   margin: 0 auto;
   max-width: var(--wrapper-width);
-  padding: 2em;
+  padding: 2em 4em;
+  padding-bottom: 5em;
   padding-top: calc(var(--tracking-large) * 5);
   position: relative;
   width: 100%;
   @media (max-width: 800px) {
     padding-top: calc(var(--tracking-large) * 3);
+  }
+  h1,h2,h3 {
+    text-align: center;
+    max-width: 100%;
+    font-weight: bold;
+  }
+
+  h1{
+    margin-bottom: 1em;
   }
 }
 </style>

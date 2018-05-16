@@ -3,9 +3,9 @@ import config from "@/config";
 import Index from "@/pages/Index";
 import Volunteer from "@/pages/Volunteer";
 import About from "@/pages/About";
-import Vision from "@/pages/Vision";
+import Npe from "@/pages/npe";
 import Events from "@/pages/Events";
-import Partnerships from "@/pages/Partnerships";
+import Partnership from "@/pages/Partnership";
 import Contact from "@/pages/Contact";
 import Error404 from "@/pages/Error404";
 import Construction from "@/pages/Construction";
@@ -38,12 +38,12 @@ let routes = [
     }
   },
   {
-    path: "/vision",
+    path: "/npe",
     alias: ["/new-pirate-economy"],
-    name: "Vision",
-    component: Vision,
+    name: "Npe",
+    component: Npe,
     meta:{
-      title: "Vision - The New Pirate Economy"
+      title: "The New Pirate Economy"
     }
   },
   {
@@ -56,12 +56,12 @@ let routes = [
     }
   },
   {
-    path: "/partnerships",
+    path: "/partnership",
     alias: ["/investors"],
-    name: "Partnerships",
-    component: Partnerships,
+    name: "Partnership",
+    component: Partnership,
     meta:{
-      title: "Partnerships & Investors"
+      title: "Partnership & Investors"
     }
   },
   {

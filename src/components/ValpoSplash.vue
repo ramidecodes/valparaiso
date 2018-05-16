@@ -54,6 +54,12 @@ export default {
     width: 100%;
     z-index: 15;
   }
+  h1 {
+    display: initial;
+  }
+  q {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
 }
 </style>
-
