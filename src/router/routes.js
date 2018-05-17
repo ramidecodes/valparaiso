@@ -66,12 +66,48 @@ let routes = [
   },
   {
     path: "/contact",
-    alias: ["/contactu-us"],
+    alias: ["/contactu-us", "/email"],
     name: "Contact",
     component: Contact,
     meta:{
       title: "Get in Contact"
     }
+  },
+  {
+    path: "/facebook",
+    name: "Facebook",
+    component: Contact,
+    meta:{
+      title: "Get in Contact"
+    },
+    beforeEnter() { location.href = 'https://www.facebook.com/adventuresofthevalparaiso/' }
+  },
+  {
+    path: "/twitter",
+    name: "Twitter",
+    component: Contact,
+    meta:{
+      title: "Get in Contact"
+    },
+    beforeEnter() { location.href = 'https://www.twitter.com/' }
+  },
+  {
+    path: "/youtube",
+    name: "Youtube",
+    component: Contact,
+    meta:{
+      title: "Get in Contact"
+    },
+    beforeEnter() { location.href = 'https://www.youtube.com/channel/UC1XzBAvMDmw21mgIdFbMbfw' }
+  },
+  {
+    path: "/instagram",
+    name: "Instagram",
+    component: Contact,
+    meta:{
+      title: "Get in Contact"
+    },
+    beforeEnter() { location.href = 'https://www.instagram.com' }
   },
   {
     path: "*",

@@ -3,7 +3,7 @@
     <!-- <transition name="transition-loading" mode="out-in">
       <valpo-loading v-if="!cached || showLoader"></valpo-loading>
     </transition> -->
-    <valpo-side-menu/>
+    <valpo-top-bar/>
     <router-view/>
     <valpo-partners/>
     <valpo-footer v-if="$_config.site.mode === 1"></valpo-footer>
@@ -11,13 +11,13 @@
 </template>
 
 <script>
-import ValpoSideMenu from "@/components/ValpoSideMenu";
+import ValpoTopBar from "@/components/ValpoTopBar";
 import ValpoFooter from "@/components/ValpoFooter";
 import ValpoPartners from "@/components/ValpoPartners";
 
 export default {
   name: "Site",
-  components: { ValpoFooter, ValpoSideMenu, ValpoPartners }
+  components: { ValpoFooter, ValpoTopBar, ValpoPartners }
 };
 </script>
 

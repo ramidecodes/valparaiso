@@ -24,6 +24,40 @@
         </p>
       </valpo-two-col-section>
 
+      <h2 class="cta">Our Future Activities Abroad</h2>
+      <valpo-two-col-section>
+        <valpo-list class="icons flex-center">
+          <valpo-list-item v-for="(item) in pirateStuff" :key="item.icon">
+            <figure>
+              <img v-lazy="item.icon" :alt="item.alt">
+              <figcaption>{{ item.alt }}</figcaption>
+            </figure>
+          </valpo-list-item>
+        </valpo-list>
+        <p>
+          In 2019, our journey to Valparaiso will begin. We’ll set up temporary marketplaces in the U.K., France, Denmark, Spain, Portugal, Morocco, the Canary Islands, Cuba, Puerto Rico, Venezuela, Brazil, Argentina, and, of course, Chile - our final destination. We expect the journey to take a year and a half.
+        </p>
+        <p>
+          We’ll stock the ship with goods contributed by people and partners. Through a series of sustainability workshops, we’ll show how recycling, upcycling and responsible waste management can change the world.
+        </p>
+        <p>
+          Whilst abroad, we will trade donated goods and our skills for three things:
+        </p>
+        <h4>Stories</h4>
+        <p>
+          Stories and experiences are what makes each of us who we are, and sharing them is what bonds us in this journey of combined human consciousness. Stories are recorded, labelled with a serial number, and will be playable on our website, Facebook and mobile app.
+          We will make a documentary of our entire story.
+        </p>
+        <h4>Goods</h4>
+        <p>
+          We will trade our skills and donated goods from our sponsors for sailing necessities and mementos from communities we encounter. All transactions will be recorded in our online database, so that the participants from both our homebase community and abroad can track the journey of their goods across the globe.
+        </p>
+        <h4>Skills</h4>
+        <p>
+          The Valparaiso has always attracted unique people from all over the world with varied skillsets. When we set sail, we will trade the skills of the people we meet with donated goods from our local community.
+        </p>
+      </valpo-two-col-section>
+
       <!-- Todo> Create Timeline Component -->
       <section class="timeline">
         <h3>The Timeline</h3>
@@ -74,6 +108,12 @@ import light from "../assets/images/image-light.jpg";
 import qr from "../assets/images/image-qr.jpg";
 import birds from "../assets/images/image-birds.jpg";
 
+// iconSpeaker
+import iconSpeaker from "../assets/images/icons/speaker_icon.svg";
+import iconTreasure from "../assets/images/icons/treasure_icon.svg";
+import iconWrench from "../assets/images/icons/wrench_icon.svg";
+import iconEconomy from "../assets/images/icons/pirate_economy.svg";
+
 // Crew
 import alexis from "../assets/images/crew/Alexis_Camejo_crew.jpg";
 import bolour from "../assets/images/crew/Bolour_Khaz_crew.jpg";
@@ -106,6 +146,20 @@ export default {
       src: "https://fat.gfycat.com/HighlevelZestyAxolotl.webm",
       loop: true
     },
+    pirateStuff: [
+      {
+        icon: iconSpeaker,
+        alt: "Stories"
+      },
+      {
+        icon: iconTreasure,
+        alt: "Goods"
+      },
+      {
+        icon: iconWrench,
+        alt: "Skills"
+      }
+    ],
     crew: [
       {
         image: ulysses,
