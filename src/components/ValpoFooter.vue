@@ -1,28 +1,33 @@
 <template>
   <footer id="footer" class="footer content flex-around">
-    <p>
-      Stichting Adventures of the Valparaiso.<br>
-      NL86TRIO2205 4507 27
-      <br>&copy; 2018 All rights (and lefts) reserved.<br><br>
-      Site by <router-link :to="{ name: 'About', params: { focus: 'crew' }}" title="Art &amp; Design">Alexis Camejo</router-link> &amp; <router-link :to="{ name: 'About', params: { focus: 'crew' }}" title="Development">Timo Heddes & Ramiro Ramirez</router-link>
-    </p>
+    <div>
+      <h4 class="align-center">Join us on our journey!</h4>
+      <valpo-socialmedia/>
+    </div>
     <p class="align-center">
-      Join us on our journey!<br>
+      <br>
       <img v-lazy="images.logo" class="logo" alt="Adventures of the Valparaiso" />
     </p>
     <p class="align-center">
-      Partners:
+      Stichting Adventures of the Valparaiso.<br>
+      NL86TRIO2205 4507 27
+      <br>&copy; 2017-{{thisYear}} All rights (and lefts) reserved.<br><br>
+      Site by <router-link :to="{ name: 'About', params: { focus: 'crew' }}" title="Art &amp; Design">Alexis Camejo</router-link> &amp; <router-link :to="{ name: 'About', params: { focus: 'crew' }}" title="Development">Timo Heddes & Ecovirtual</router-link>
     </p>
   </footer>
 </template>
 
 <script>
+
 import logo from "../assets/images/logo-valparaiso.svg";
+import ValpoSocialmedia from "@/components/ValpoSocialmedia";
 
 export default {
   name: "Footer",
+  components: {ValpoSocialmedia},
   data: () => ({
-    images: { logo }
+    images: { logo },
+    thisYear : new Date().getFullYear()
   })
 };
 </script>
