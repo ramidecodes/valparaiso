@@ -23,7 +23,11 @@ d<template>
         </p>
       </valpo-two-col-section>
       <p>
-        <valpo-button class="button cerulean large" label="Download our manifesto"></valpo-button>
+        <!-- <router-link :to="{ name: 'Manifesto', params: {} }">
+        </router-link> -->
+        <a href="/static/New-Pirate-Economy-manifesto.pdf" target="_blank">
+          <valpo-button class="button cerulean large" label="Download our manifesto"></valpo-button>
+        </a>
       </p>
 
       <hr>

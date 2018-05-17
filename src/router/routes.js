@@ -110,6 +110,14 @@ let routes = [
     beforeEnter() { location.href = 'https://www.instagram.com' }
   },
   {
+    path: "/static/New-Pirate-Economy-manifesto.pdf",
+    alias: ["/manifesto"],
+    name: "Manifesto",
+    meta:{
+      title: "The New Pirate Economy Manifesto"
+    }
+  },
+  {
     path: "*",
     name: "Error404",
     component: Error404,
