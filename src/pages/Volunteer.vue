@@ -2,9 +2,9 @@
   <main role="main" id="index">
 
     <!-- <valpo-splash class="splash" :video="video" :image="images.giuliana"> -->
-    <valpo-splash class="splash" :image="images.giuliana">
+    <valpo-youtube-splash class="splash" :video="video.src" :image="images.giuliana">
       <img v-lazy="images.logo" class="logo" alt="Adventures of the Valparaiso" /><br>
-    </valpo-splash>
+    </valpo-youtube-splash>
 
     <valpo-content id="volunteer" class="volunteer flex-rows align-center">
       <h3>
@@ -53,7 +53,7 @@
 </template>
 
 <script>
-import ValpoSplash from "@/components/ValpoSplash";
+import ValpoYoutubeSplash from "@/components/ValpoYoutubeSplash";
 import ValpoContent from "@/components/ValpoContent";
 import ValpoList from "@/components/ValpoList";
 import ValpoListItem from "@/components/ValpoListItem";
@@ -76,7 +76,7 @@ import birds from "../assets/images/image-birds.jpg";
 export default {
   name: "Volunteer",
   components: {
-    ValpoSplash,
+    ValpoYoutubeSplash,
     ValpoContent,
     ValpoList,
     ValpoListItem,
@@ -85,7 +85,7 @@ export default {
   data: () => ({
     images: { logo, giuliana, beach },
     video: {
-      src: "https://fat.gfycat.com/HighlevelZestyAxolotl.webm",
+      src: "cjC9ggS7EVE",
       loop: true
     },
     tasks: [

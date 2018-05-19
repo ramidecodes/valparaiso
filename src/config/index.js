@@ -4,7 +4,7 @@ import firebase from "./firebase";
 
 const config = {
   site: {
-    name: "Valparaiso",
+    name: "Adventures of the Valparaiso",
     version: 2.0,
     mode: 1 // 0: under construction, 1: online/normal
   },
