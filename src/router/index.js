@@ -31,5 +31,9 @@ router.beforeResolve((to, from, next) => {
   document.title = `${config.site.name} - ${to.meta.title}`;
   next();
 });
+// Scroll to top after routing to a new page
+router.afterEach(() => {
+  window.scrollTo(0, 0);
+});
 
 export default router;

@@ -1,12 +1,12 @@
 <template>
-  <main role="main" id="index">
+  <main role="main" id="error404">
 
     <valpo-splash class="splash" :video="video" :image="images.giuliana">
       <!-- ~ we like acid yay ~ -->
       <img v-lazy="images.logo" class="logo" alt="Adventures of the Valparaiso" /><br>
     </valpo-splash>
 
-    <valpo-content id="error404" class="error404 flex-rows align-center">
+    <valpo-content class="error404 flex-rows align-center">
       <h3>
         Error 404 - Treasure not found
       </h3>

@@ -1,11 +1,11 @@
 <template>
-  <main role="main" id="index">
+  <main role="main" id="partnership">
 
     <valpo-splash class="splash" :image="images.giuliana">
       <img v-lazy="images.logo" class="logo" alt="Adventures of the Valparaiso" /><br>
     </valpo-splash>
 
-    <valpo-content id="partnership" class="partnership flex-rows align-center">
+    <valpo-content class="partnership flex-rows align-center">
       <h1>Get Involved!</h1>
       <valpo-two-col-section>
         <p>

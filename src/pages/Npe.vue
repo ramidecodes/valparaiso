@@ -1,5 +1,5 @@
 d<template>
-  <main role="main" id="index">
+  <main role="main" id="npe">
 
     <valpo-splash class="splash" :image="images.npe">
       <img v-lazy="images.logo" class="logo" alt="Adventures of the Valparaiso" /><br>
@@ -9,7 +9,7 @@ d<template>
       </q>
     </valpo-splash>
 
-    <valpo-content id="npe" class="npe flex-rows align-center">
+    <valpo-content class="npe flex-rows align-center">
       <h1>The New Pirate Economy Manifesto</h1>
       <valpo-two-col-section>
         <p>

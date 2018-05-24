@@ -99,7 +99,10 @@ nav a{
     text-decoration:none !important;
     line-height:1;
     text-transform: uppercase;
-    background-color:transparent
+    background-color:transparent;
+    &.router-link-exact-active.active {
+      text-shadow: 0 0 9px #001a55;
+    }
 }
 
 .nav-toggle {

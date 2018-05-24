@@ -1,12 +1,12 @@
 <template>
-  <main role="main" id="index">
+  <main role="main" id="contact">
 
     <valpo-splash class="splash" :video="video" :image="images.giuliana">
       <img v-lazy="images.logo" class="logo" alt="Adventures of the Valparaiso" /><br>
       <!-- ~ we like acid yay ~ -->
     </valpo-splash>
 
-    <valpo-content id="contact" class="contact flex-rows align-center">
+    <valpo-content class="contact flex-rows align-center">
       <h3>
         History of the Valparaiso
       </h3>
