@@ -3,7 +3,7 @@ import config from "@/config";
 import Index from "@/pages/Index";
 import Volunteer from "@/pages/Volunteer";
 import About from "@/pages/About";
-import Npe from "@/pages/npe";
+import Npe from "@/pages/Npe";
 import Events from "@/pages/Events";
 import Partnership from "@/pages/Partnership";
 import Contact from "@/pages/Contact";

@@ -1,7 +1,7 @@
 import Vue from "vue";
 import App from "./App";
 import router from "./router";
-import VueYouTubeEmbed from 'vue-youtube-embed';
+import VueYoutube from 'vue-youtube'
 // import store from './store'
 // import { sync } from 'vuex-router-sync'
 
@@ -13,7 +13,7 @@ import config from "./config";
 
 // sync(store, router)
 
-Vue.use(VueYouTubeEmbed, { global: false });
+Vue.use(VueYoutube)
 
 Vue.config.productionTip = false;
 

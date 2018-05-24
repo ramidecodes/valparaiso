@@ -1,14 +1,13 @@
 <template>
   <main role="main" id="index">
 
-    <!-- <valpo-splash class="splash" :video="video" :image="images.giuliana"> -->
-    <valpo-youtube-splash class="splash" :video="video.src" :image="images.giuliana">
-      <img v-lazy="images.logo" class="logo" alt="Adventures of the Valparaiso" /><br>
+    <valpo-youtube-splash class="splash" :video="video">
+      <h1>Become a volunteer</h1>
     </valpo-youtube-splash>
 
     <valpo-content id="volunteer" class="volunteer flex-rows align-center">
       <h3>
-        Become a volunteer
+        Join us!
       </h3>
       <p>
         We are determined, with support from our homebase in the Netherlands, to equip a larger and seaworthy ship for an international journey of art, sustainability, connection, education, and technological innovation. This all comes together to promote an alternative and people-centric way of trading. One that we call the New Pirate Economy.
@@ -85,8 +84,7 @@ export default {
   data: () => ({
     images: { logo, giuliana, beach },
     video: {
-      src: "cjC9ggS7EVE",
-      loop: true
+      src: "cjC9ggS7EVE"
     },
     tasks: [
       {

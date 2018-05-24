@@ -63,12 +63,19 @@ export default {
   z-index: 99;
   ul.valpo-list.icons {
     margin: 0;
+    margin-right: 7px;
     li {
-      margin: 18px;
+          margin: 16px 7px;
       img {
         width: 32px;
       }
     }
+  }
+}
+
+@media (max-width: 630px) {
+  #top-bar .socialmedia {
+    display: none;
   }
 }
 

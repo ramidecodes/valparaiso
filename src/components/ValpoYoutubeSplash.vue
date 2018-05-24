@@ -1,22 +1,44 @@
 <template>
-  <section class="splash fixed-pseudo flex-container flex-center" :style="`backgroundImage: url(${image})`">
-    <youtube :video-id="video.src"></youtube>
-    <div class="splash-slot">
+  <section class="splash splash-youtube fixed-pseudo flex-container flex-center" :style="`backgroundImage: url(${image})`">
+
+    <youtube  :video-id="video.src"
+              :player-vars="playerVars"
+              :width="windowsWidth"
+              :height="windowsHeight"
+              ref="youtube"
+              @playing="playing"
+              @paused="paused"
+              @ended="ended"
+              style="position:fixed;"
+    />
+
+    <div class="splash-slot" v-bind:class="{ hidden: isPlaying }">
       <slot></slot>
     </div>
   </section>
 </template>
 
 <script>
-
-import youtube from 'vue-youtube-embed';
-
 export default {
   name: "YoutubeSplash",
+  data: () => ({
+    playerVars: {
+        frameborder: 0,
+        controls: 0,
+        fs: 0,
+        iv_load_policy: 3,
+        modestbranding: 1,
+        rel: 0,
+        showinfo: 0
+      },
+    windowsWidth: window.innerWidth,
+    windowsHeight: window.innerHeight,
+    isPlaying: false
+  }),
   props: {
     video: {
-      type: String,
-      required: false
+      type: Object,
+      required: true
     },
     image: {
       type: String,
@@ -25,7 +47,28 @@ export default {
     }
   },
   components: {
-    youtube
+
+  },
+  computed: {
+    player () {
+      return this.$refs.youtube.player
+    }
+  },
+  methods: {
+    async playVideo() {
+      await this.player.playVideo()
+    },
+    playing() {
+      // Hide Title when Playing
+      this.isPlaying = true
+    },
+    paused() {
+      this.isPlaying = false
+      console.log("Paaaused");
+    },
+    ended() {
+      this.isPlaying = false
+    }
   }
 };
 </script>
@@ -56,9 +99,13 @@ export default {
     position: relative;
     width: 100%;
     z-index: 15;
+    top: -20%;
   }
   h1 {
     display: initial;
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 0 1px 3px #333;
   }
   q {
     font-size: 1.5rem;

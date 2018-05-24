@@ -58,4 +58,9 @@ export default {
     max-width: 250px;
   }
 }
+@media (max-width: 550px){
+  footer li.valpo-list-item {
+    width: inherit;
+  }
+}
 </style>

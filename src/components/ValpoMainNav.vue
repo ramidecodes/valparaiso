@@ -4,6 +4,11 @@
       <div class="nav-toggle-bar"></div>
     </div>
     <nav v-bind:class="{ expanded: menuIsActive }" class="nav">
+      <!-- <section class="logo">
+        <router-link :to="{ name: 'Index'}">
+          <valpo-logo/>
+        </router-link>
+      </section> -->
       <ul>
         <li v-on:click="menuIsActive = !menuIsActive"><router-link :to="{ name: 'Index'}">Home</router-link></li>
         <li v-on:click="menuIsActive = !menuIsActive"><router-link :to="{ name: 'About'}">The History</router-link></li>
@@ -15,21 +20,17 @@
       </ul>
     </nav>
   </section>
-  <!-- <section class="logo">
-    <router-link :to="{ name: 'Index'}">
-      <img v-lazy="images.logo" class="logo" alt="Adventures of the Valparaiso" />
-    </router-link>
-  </section> -->
 </template>
 
 <script>
 
 import logo from "../assets/images/logo-valparaiso.svg";
+import ValpoLogo from "@/components/ValpoLogo";
 
 export default {
   name: "MainNavigation",
   components: {
-
+    ValpoLogo
   },
   data: () => ({
     images: [ logo ],
@@ -40,8 +41,14 @@ export default {
 </script>
 
 <style lang="scss">
+// .logo {
+//     margin-top: 2em;
+//     width: 100%;
+//     padding: 1em;
+// }
 .main-nav {
   align-self: flex-start;
+  width: 190px;
 }
 .nav {
   -webkit-transition: left 0.5s ease;
@@ -72,6 +79,7 @@ export default {
 
 .nav ul {
   position: absolute;
+  width: 15rem;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -87,7 +95,7 @@ nav li{
 nav a{
     color: white !important;
     font-weight:bold;
-    font-size:1.4em;
+    font-size:1.2em;
     text-decoration:none !important;
     line-height:1;
     text-transform: uppercase;
