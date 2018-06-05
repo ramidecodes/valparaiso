@@ -2,19 +2,19 @@
   <main role="main" id="about">
 
     <valpo-splash class="splash" :image="images.about">
-      <!-- ~ we like acid yay ~ -->
-      <img v-lazy="images.logo" class="logo" alt="Adventures of the Valparaiso" /><br>
+    <h1>Get to know the pirates</h1>
+    <!-- <img v-lazy="images.logo" class="logo" alt="Adventures of the Valparaiso" /><br> -->
     </valpo-splash>
 
     <valpo-content class="about flex-rows align-center">
-      <h3>
+      <h2>
         History of the Valparaiso
-      </h3>
+      </h2>
       <valpo-two-col-section>
         <p>Valparaiso is a city located on the coastline of Chile, between the Andes and the Pacific Ocean. It was named afterby the Spanish conquerors when their ships moored upon the shores over five hundred years ago. It was the closest port city that lay along the path to a place which was considered paradise by these sailors after a long enduring journey.
         </p>
-        <p>Ulysses, a dutch traveler, came to the city by coincidence. With his motorcycle left broken on the roadside in Argentina, he resorted to hitchhiking to continue his journey and found his way to Valparaiso. As he travelled through the rough exterior he began to look more into the interior of the city. He fell in love with the bohemian and artistic winds within the city and found a limitless source of inspiration. Like dirty nails and worn hands, the city had its own beauty beneath the surface.
-        </p>
+        <p>Ulysses, a dutch traveler, came to the city by coincidence. With his motorcycle left broken on the roadside in Argentina, he resorted to hitchhiking to continue his journey and found his way to Valparaiso.</p>
+        <p>As he travelled through the rough exterior he began to look more into the interior of the city. He fell in love with the bohemian and artistic winds within the city and found a limitless source of inspiration. Like dirty nails and worn hands, the city had its own beauty beneath the surface.</p>
       </valpo-two-col-section>
       <h4>His compass turned upside down</h4>
       <valpo-two-col-section>
@@ -24,69 +24,22 @@
         </p>
       </valpo-two-col-section>
 
-      <h2 class="cta">Our Future Activities Abroad</h2>
-      <valpo-two-col-section>
-        <valpo-list class="icons flex-center">
-          <valpo-list-item v-for="(item) in pirateStuff" :key="item.icon">
+      <!-- The Timeline -->
+      <h2>The Timeline</h2>
+      <hr>
+      <valpo-timeline/>
+
+      <section class="crew">
+        <h2>The Crew</h2>
+        <valpo-list class="crew-members flex-center">
+          <valpo-list-item v-for="(member) in crew" :key="member.icon">
             <figure>
-              <img v-lazy="item.icon" :alt="item.alt">
-              <figcaption>{{ item.alt }}</figcaption>
+              <img v-lazy="member.image" :alt="member.name">
+              <figcaption>{{ member.name }} <br/><em>{{member.title}}</em> </figcaption>
             </figure>
           </valpo-list-item>
         </valpo-list>
-        <p>
-          In 2019, our journey to Valparaiso will begin. We’ll set up temporary marketplaces in the U.K., France, Denmark, Spain, Portugal, Morocco, the Canary Islands, Cuba, Puerto Rico, Venezuela, Brazil, Argentina, and, of course, Chile - our final destination. We expect the journey to take a year and a half.
-        </p>
-        <p>
-          We’ll stock the ship with goods contributed by people and partners. Through a series of sustainability workshops, we’ll show how recycling, upcycling and responsible waste management can change the world.
-        </p>
-        <p>
-          Whilst abroad, we will trade donated goods and our skills for three things:
-        </p>
-        <h4>Stories</h4>
-        <p>
-          Stories and experiences are what makes each of us who we are, and sharing them is what bonds us in this journey of combined human consciousness. Stories are recorded, labelled with a serial number, and will be playable on our website, Facebook and mobile app.
-          We will make a documentary of our entire story.
-        </p>
-        <h4>Goods</h4>
-        <p>
-          We will trade our skills and donated goods from our sponsors for sailing necessities and mementos from communities we encounter. All transactions will be recorded in our online database, so that the participants from both our homebase community and abroad can track the journey of their goods across the globe.
-        </p>
-        <h4>Skills</h4>
-        <p>
-          The Valparaiso has always attracted unique people from all over the world with varied skillsets. When we set sail, we will trade the skills of the people we meet with donated goods from our local community.
-        </p>
-      </valpo-two-col-section>
-
-      <!-- Todo> Create Timeline Component -->
-      <section class="timeline">
-        <h3>The Timeline</h3>
       </section>
-
-      <h3 id="crew" class="crew">
-        The Crew
-      </h3>
-      <valpo-list class="crew-members flex-center">
-        <valpo-list-item v-for="(item) in crew" :key="item.icon">
-          <figure>
-            <img v-lazy="item.image" :alt="item.title">
-            <figcaption>{{ item.title }}</figcaption>
-          </figure>
-        </valpo-list-item>
-      </valpo-list>
-    </valpo-content>
-    <valpo-content id="form" class="form flex-rows fixed-pseudo" v-lazy:background-image="images.beach">
-      <div class="message">
-        <h3>Message in a bottle</h3>
-        <p>
-          Want to get in touch, have a question or just want to say hi?<br>
-          We're always on the lookout for new abouts and ideas!
-          <br><br>
-        </p>
-        <p>
-          <valpo-button class="button terracota" label="Send us an email!"></valpo-button>
-        </p>
-      </div>
     </valpo-content>
   </main>
 </template>
@@ -97,35 +50,28 @@ import ValpoContent from "@/components/ValpoContent";
 import ValpoList from "@/components/ValpoList";
 import ValpoListItem from "@/components/ValpoListItem";
 import ValpoButton from "@/components/ValpoButton";
-import ValpoTwoColSection from "@/components/ValpoTwoColSection"
+import ValpoTwoColSection from "@/components/ValpoTwoColSection";
+import ValpoTimeline from "@/components/ValpoTimeline";
 
 // Images
-import logo from "../assets/images/logo-valparaiso.svg";
-import about from "../assets/images/headers/about.jpg"
+import about from "../assets/images/headers/about.jpg";
 import beach from "../assets/images/image-beach.jpg";
 
-import light from "../assets/images/image-light.jpg";
-import qr from "../assets/images/image-qr.jpg";
-import birds from "../assets/images/image-birds.jpg";
+// import light from "../assets/images/image-light.jpg";
+// import qr from "../assets/images/image-qr.jpg";
+// import birds from "../assets/images/image-birds.jpg";
 
-// iconSpeaker
-import iconSpeaker from "../assets/images/icons/speaker_icon.svg";
-import iconTreasure from "../assets/images/icons/treasure_icon.svg";
-import iconWrench from "../assets/images/icons/wrench_icon.svg";
 import iconEconomy from "../assets/images/icons/pirate_economy.svg";
 
 // Crew
-import alexis from "../assets/images/crew/Alexis_Camejo_crew.jpg";
-import bolour from "../assets/images/crew/Bolour_Khaz_crew.jpg";
-import brandon from "../assets/images/crew/Brandon_Turner_crew.jpg";
-import david from "../assets/images/crew/David_Delgado_crew.jpg";
-import gabriel from "../assets/images/crew/Gabriel_Busili_crew.jpg";
-import kim from "../assets/images/crew/Kim_Berghout_crew.jpg";
-import margo from "../assets/images/crew/Margo_Muttart_crew.jpg";
-import timothy from "../assets/images/crew/Timothy_Heddes_crew.jpg";
-import ulysses from "../assets/images/crew/Ulysses_Schuitemaker_crew.jpg";
-import vivian from "../assets/images/crew/Vivian_Soneghet_crew.jpg";
-import yoram from "../assets/images/crew/Yoram_crew.jpg";
+import ulysses from "../assets/images/crew/valparaiso-crew-ulysses.jpg";
+import margo from "../assets/images/crew/valparaiso-crew-margo.jpg";
+import alexis from "../assets/images/crew/valaparaiso-crew_alexis.jpg";
+import david from "../assets/images/crew/valparaiso-crew-dave.jpg";
+import ramiro from "../assets/images/crew/Ramiro_Ramirez_crew.jpg";
+import lyvia from "../assets/images/crew/valparaiso-crew-lyvia.jpg";
+import jen from "../assets/images/crew/valparaiso-crew-jennie.jpg";
+import yoram from "../assets/images/crew/valaparaiso-crew_alexis.jpg";
 
 export default {
   name: "About",
@@ -135,71 +81,57 @@ export default {
     ValpoList,
     ValpoListItem,
     ValpoButton,
-    ValpoTwoColSection
+    ValpoTwoColSection,
+    ValpoTimeline
   },
   data: () => ({
     images: {
-      logo, about, beach, alexis, bolour, brandon, david, gabriel, kim,
-      margo, timothy, ulysses, vivian, yoram
+      about, beach
     },
-    video: {
-      src: "https://fat.gfycat.com/HighlevelZestyAxolotl.webm",
-      loop: true
-    },
-    pirateStuff: [
-      {
-        icon: iconSpeaker,
-        alt: "Stories"
-      },
-      {
-        icon: iconTreasure,
-        alt: "Goods"
-      },
-      {
-        icon: iconWrench,
-        alt: "Skills"
-      }
-    ],
     crew: [
       {
         image: ulysses,
-        title: "Ulysses Schuitemaker"
+        name: "Ulysses Schuitemaker",
+        title: "Captain & Founder",
       },
       {
         image: margo,
-        title: "Margo Muttart"
-      },
-      {
-        image: vivian,
-        title: "Vivian Soneghet"
-      },
-      {
-        image: kim,
-        title: "Kim Berghout"
-      },
-      {
-        image: bolour,
-        title: "Bolour Khaz"
-      },
-      {
-        image: brandon,
-        title: "Brandon Turner"
+        name: "Margo Muttart",
+        title: "Commander",
+
       },
       {
         image: alexis,
-        title: "Alexis Camejo"
+        name: "Alexis Camejo",
+        title: "Designer",
       },
       {
         image: david,
-        title: "David Delgado"
+        name: "David Delgado",
+        title: "Developer & Party Lieutenant",
+
+      },
+      {
+        image: jen,
+        name: "Jen",
+        title: "Treasurer",
+
+      },
+      {
+        image: lyvia,
+        name: "Lyvia",
+        title: "Wind of the East",
+
       },
       {
         image: yoram,
-        title: "Yoram"
+        name: "Yoram ",
+        title: "Chief Technician",
       },
       {
-        image: gabriel,
-        title: "Gabriel Busili"
+        image: ramiro,
+        name: "Ramiro Ramirez",
+        title: "Developer & Dub Officer",
       }
     ]
   })
@@ -209,16 +141,16 @@ export default {
 <style lang="scss" scoped>
 section.splash {
   background-position-y: 100%;
-  .logo {
-    max-width: 400px;
-    width: 90%;
-  }
+}
+hr{
+  margin: 0;
+  border: 1px solid var(--color-cerulean);
 }
 .about {
   background: linear-gradient(
     to bottom,
     var(--color-ocean) 0%,
-    rgba(0, 175, 187, 1) 100%
+    var(--color-cerulean) 100%
   );
   padding-bottom: calc(var(--tracking-large) * 5);
   padding-top: calc(var(--tracking-large) * 5);
@@ -250,12 +182,10 @@ section.splash {
     padding-top: calc(var(--tracking-large) * 5);
   }
   .crew-members {
-    .valpo-list-item {
+    margin: 0 3em;
+    li {
       margin: 5vw;
       max-width: 160px;
-    }
-    margin-top: calc(var(--tracking-large) * 2);
-    li {
       margin-top: calc(var(--tracking-large) * 1);
       figure {
         width: 100%;
@@ -265,8 +195,10 @@ section.splash {
           max-height: 160px;
         }
         figcaption {
-          font-family: "BentonSans Cond";
           padding-top: 0;
+          em {
+            font-weight: 300;
+          }
         }
       }
       @media (max-width: 640px) {
@@ -304,7 +236,7 @@ section.splash {
     position: absolute;
     right: 0;
     width: 100%;
-    h3 {
+    h2 {
       margin-bottom: 1.5em;
     }
   }

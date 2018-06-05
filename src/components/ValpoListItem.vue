@@ -29,13 +29,12 @@ export default {
     figcaption {
       margin-top: 0.5em;
       font-family: "BentonSans Cond";
-      font-size: 1.1em;
+      font-size: 1.3em;
       font-weight: 500;
       padding-top: 0.2em;
+      text-align: center;
+      line-height: 1.2em;
     }
-  }
-  &:hover {
-    transform: scale(1.08);
   }
   @media (max-width: 800px) {
     margin-top: 0;

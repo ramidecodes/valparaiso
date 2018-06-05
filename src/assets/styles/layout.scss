@@ -1,7 +1,6 @@
 .flex-container {
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  flex-flow: column nowrap;
   justify-content: flex-start;
   align-content: stretch;
   align-items: center;
@@ -13,14 +12,14 @@
 
 .flex-around {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: space-around;
   align-content: flex-start;
   align-items: flex-start;
 }
 
 .flex-center {
+  display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
@@ -76,26 +75,19 @@
   display: block;
 }
 
-// .two-col-section {
-//   display: flex;
-//   flex-flow: row wrap;
-//   // justify-content: space-between;
-//   align-content: flex-start;
-//   align-items: flex-start;
-//   margin-bottom: var(--section-bottom-margin);
-//   h1,h2,h3,h4 {
-//     flex: 1 100%;
-//     align-self: center;
-//     text-align: center;
-//     max-width: 100%;
-//   }
-//   p {
-//     flex: 1 50%;
-//     text-align: left;
-//   }
-//   @media all and (max-width: 600px){
-//     p {
-//       flex: 1 auto;
-//     }
-//   }
-// }
+.two-col-flex {
+  display: flex;
+  flex-flow: row wrap;
+  // justify-content: space-between;
+  align-content: flex-start;
+  align-items: flex-start;
+  section {
+    flex: 1 50%;
+    text-align: left;
+  }
+  @media all and (max-width: 600px){
+    section {
+      flex: 1 auto;
+    }
+  }
+}

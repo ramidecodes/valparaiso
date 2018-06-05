@@ -1,7 +1,7 @@
 <template>
   <main role="main" id="index">
 
-    <valpo-youtube-splash class="splash" :video="video">
+    <valpo-youtube-splash class="splash" :image="images.giuliana" :video="video">
       <h1>Become a volunteer</h1>
     </valpo-youtube-splash>
 
@@ -10,7 +10,10 @@
         Join us!
       </h3>
       <p>
-        We are determined, with support from our homebase in the Netherlands, to equip a larger and seaworthy ship for an international journey of art, sustainability, connection, education, and technological innovation. This all comes together to promote an alternative and people-centric way of trading. One that we call the New Pirate Economy.
+        Looking to be part of an inclusive and creative community? </br>
+        Trade your skills and knowledge in exchange for the chance to learn
+        something new from our international crew of volunteers,
+        and get a taste of the pirate life!
       </p>
       <valpo-list class="icons flex-center">
         <valpo-list-item v-for="(item) in tasks" :key="item.icon">
@@ -27,10 +30,14 @@
         We are determined, with support from our homebase in the Netherlands, to equip a larger and seaworthy ship for aninternational journey of art, sustainability, connection, education, and technological innovation. This all comes together to promote an alternative and people-centric way of trading. One that we call the New Pirate Economy.
       </p>
       <valpo-list class="project-items flex-center">
-        <valpo-list-item v-for="(item) in projects" :key="item.icon">
+        <valpo-list-item v-for="(project) in projects" :key="project.icon">
           <figure>
-            <img v-lazy="item.image" :alt="item.title">
-            <figcaption>{{ item.title }}</figcaption>
+            <img v-lazy="project.image" :alt="project.title">
+            <figcaption>
+              {{ project.title }}</br>
+              <span class="project-description">{{ project.description }}</span>
+
+            </figcaption>
           </figure>
         </valpo-list-item>
       </valpo-list>
@@ -44,7 +51,7 @@
             <br><br>
           </p>
           <p>
-            <valpo-button class="button cerulean" label="Send us an email!"></valpo-button>
+            <valpo-button class="button magenta" label="Send us a message!"></valpo-button>
           </p>
         </div>
       </valpo-content>
@@ -58,7 +65,6 @@ import ValpoList from "@/components/ValpoList";
 import ValpoListItem from "@/components/ValpoListItem";
 import ValpoButton from "@/components/ValpoButton";
 
-import logo from "../assets/images/logo-valparaiso.svg";
 import giuliana from "../assets/images/image-giuliana.jpg";
 import beach from "../assets/images/image-beach.jpg";
 
@@ -68,9 +74,15 @@ import iconVideo from "../assets/images/icon-video.svg";
 import iconMarketing from "../assets/images/icon-marketing.svg";
 import iconSocial from "../assets/images/icon-social.svg";
 
-import light from "../assets/images/image-light.jpg";
-import qr from "../assets/images/image-qr.jpg";
-import birds from "../assets/images/image-birds.jpg";
+import light from "../assets/images/projects/image-light.jpg";
+import qr from "../assets/images/projects/image-qr.jpg";
+import birds from "../assets/images/projects/image-birds.jpg";
+import boatbike from "../assets/images/projects/valparaiso_projects_boatbike.jpg";
+import festivals from "../assets/images/projects/valparaiso_projects_festivals.jpg";
+import glass from "../assets/images/projects/valparaiso_projects_glass.jpg";
+import grulla from "../assets/images/projects/valparaiso_projects_grulla.jpg";
+
+// TODO: add new pictures
 
 export default {
   name: "Volunteer",
@@ -82,14 +94,14 @@ export default {
     ValpoButton
   },
   data: () => ({
-    images: { logo, giuliana, beach },
+    images: { giuliana, beach },
     video: {
       src: "cjC9ggS7EVE"
     },
     tasks: [
       {
         icon: iconBuilding,
-        alt: "Building / Repairing"
+        alt: "Building & Repairing"
       },
       {
         icon: iconDesign,
@@ -97,7 +109,7 @@ export default {
       },
       {
         icon: iconVideo,
-        alt: "Photography / Video"
+        alt: "Multimedia Production"
       },
       {
         icon: iconMarketing,
@@ -111,15 +123,28 @@ export default {
     projects: [
       {
         image: light,
-        title: "We're upgrading our ship!"
+        title: "Ship upgrading",
+        description: "Grab the tools and get hands on!"
       },
       {
         image: qr,
-        title: "The pirate app"
+        title: "The Pirate App",
+        description: "Code with our pirate developers"
       },
       {
-        image: birds,
-        title: "Into the Woods festival"
+        image: boatbike,
+        title: "Boat-Bike",
+        description: "Building a pirate ship on an e-bike"
+      },
+      {
+        image: festivals,
+        title: "Festival planning",
+        description: "Organize summer festivals!"
+      },
+      {
+        image: glass,
+        title: "Stained glass",
+        description: "An old craft in a new light"
       }
     ]
   })
@@ -182,6 +207,10 @@ export default {
         figcaption {
           font-family: "BentonSans Cond";
           padding-top: 0;
+          .project-description {
+            font-weight: 300;
+            padding-top: 5px;
+          }
         }
       }
       @media (max-width: 640px) {

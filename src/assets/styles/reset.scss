@@ -172,6 +172,10 @@ button,
 textarea {
   overflow: auto; /* Internet Explorer 11+ */
   resize: vertical; /* Specify textarea resizability */
+  width: 100%;
+}
+textarea:focus {
+    outline: none;
 }
 
 button,
@@ -232,8 +236,8 @@ textarea {
 
 /* Style select like a standard input */
 select {
-  -moz-appearance: none; /* Firefox 36+ */
-  -webkit-appearance: none; /* Chrome 41+ */
+  -moz-appearance: menulist; /* Firefox 36+ */
+  // -webkit-appearance: none; /* Chrome 41+ */
 }
 
 select::-ms-expand {

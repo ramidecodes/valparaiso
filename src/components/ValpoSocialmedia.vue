@@ -65,12 +65,25 @@ export default {
     margin: 0;
     margin-right: 7px;
     li {
-          margin: 16px 7px;
-      img {
-        width: 32px;
+      margin: 16px 7px;
+      a {
+        display: flex;
+        img {
+          width: 32px;
+          height: 32px;
+        }
       }
     }
   }
+}
+
+footer{
+  .socialmedia {
+    ul {
+      width: 100%;
+    }
+  }
+
 }
 
 @media (max-width: 630px) {

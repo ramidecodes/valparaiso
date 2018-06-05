@@ -11,9 +11,7 @@
 </template>
 
 <script>
-import logo from "../assets/images/logo-valparaiso.svg";
-
-import partner53 from "../assets/images/partners/53_partners.png";
+import north53 from "../assets/images/partners/53gradennoord.jpg";
 import awaken from "../assets/images/partners/Awaken_More_partners.png";
 import azart from "../assets/images/partners/Azart_partners.png";
 import elektro from "../assets/images/partners/elektro_producten_partners.png";
@@ -21,6 +19,10 @@ import glas from "../assets/images/partners/glas_in_lood_boot_partners.png";
 import horeca from "../assets/images/partners/horeca_partners.png";
 import leds4life from "../assets/images/partners/leds4life_partners.png";
 import zeeds from "../assets/images/partners/zeeds_partners.png";
+import erasmusplus from "../assets/images/partners/erasmusplus.png";
+import eurocommission from "../assets/images/partners/european_commission.png";
+import tastebefore from "../assets/images/partners/tastebefore.jpg";
+
 
 import ValpoList from "@/components/ValpoList";
 import ValpoListItem from "@/components/ValpoListItem";
@@ -29,10 +31,22 @@ export default {
   name: "Partners",
   components:{ ValpoList, ValpoListItem },
   data: () => ({
-    images: { partner53, awaken, azart, elektro, glas, horeca, leds4life, zeeds },
+    images: {
+        north53,
+        awaken,
+        azart,
+        elektro,
+        glas,
+        horeca,
+        leds4life,
+        zeeds,
+        erasmusplus,
+        eurocommission,
+        tastebefore
+    },
     ourPartners: [
       {
-        icon: partner53,
+        icon: north53,
         alt: "53 Nord"
       },
       {
@@ -62,6 +76,18 @@ export default {
       {
         icon: zeeds,
         alt: "Zeedruk"
+      },
+      {
+        icon: erasmusplus,
+        alt: "Erasmus+"
+      },
+      {
+        icon: eurocommission,
+        alt: "European Commission"
+      },
+      {
+        icon: tastebefore,
+        alt: "Taste Before You Waste"
       }
     ]
   })
@@ -76,7 +102,7 @@ export default {
   max-width: var(--wrapper-width);
   min-height: 10vh;
   padding-top: calc(var(--tracking-large) * 5);
-  padding: 2em;
+  padding: 1em;
   position: relative;
   width: 100%;
   @media (max-width: 680px) {

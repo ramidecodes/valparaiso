@@ -4,7 +4,7 @@ import Index from "@/pages/Index";
 import Volunteer from "@/pages/Volunteer";
 import About from "@/pages/About";
 import Npe from "@/pages/Npe";
-import Events from "@/pages/Events";
+import Activities from "@/pages/Activities";
 import Partnership from "@/pages/Partnership";
 import Contact from "@/pages/Contact";
 import Error404 from "@/pages/Error404";
@@ -47,10 +47,10 @@ let routes = [
     }
   },
   {
-    path: "/events",
-    alias: ["/festivals","/whats-on"],
-    name: "Events",
-    component: Events,
+    path: "/activities",
+    alias: ["/festivals","/whats-on", "/events"],
+    name: "Activities",
+    component: Activities,
     meta:{
       title: "Events & Festivals"
     }

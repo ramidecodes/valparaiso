@@ -1,16 +1,18 @@
-d<template>
+<template>
   <main role="main" id="npe">
-
-    <valpo-splash class="splash" :image="images.npe">
-      <img v-lazy="images.logo" class="logo" alt="Adventures of the Valparaiso" /><br>
-      <q cite="The Pirate">
-        We are landlubbers because Mother Earth gives us her great resources.<br>
-        We are pirates because the best ideas don’t know limits.
-      </q>
+    <valpo-splash class="splash" :image="images.ship">
+      <!-- <img v-lazy="images.logo" class="logo" alt="Adventures of the Valparaiso" /><br> -->
+      <h1>New Pirate Economy</h1>
+      <div>
+        <q cite="The Pirate">
+          We are landlubbers because Mother Earth gives us her great resources.<br>
+          We are pirates because the best ideas don’t know limits.
+        </q>
+      </div>
     </valpo-splash>
 
-    <valpo-content class="npe flex-rows align-center">
-      <h1>The New Pirate Economy Manifesto</h1>
+    <valpo-content class="manifesto flex-rows align-center">
+      <h2>The New Pirate Economy Manifesto</h2>
       <valpo-two-col-section>
         <p>
           Pirates are typically known for looting, raiding and wrecking wherever they went. But pirates were also the revolutionaries, the progressives, the explorers. They challenged the existing authority, sailed away from mainstream society and created their own alternative culture and socio-economic structure. As pirates of the Valparaíso, we believe that everyone has something to share: culture, experiences, skills and knowledge. We don’t raid, loot or wreck, but collaborate to create change.
@@ -29,8 +31,9 @@ d<template>
           <valpo-button class="button cerulean large" label="Download our manifesto"></valpo-button>
         </a>
       </p>
+    </valpo-content>
 
-      <hr>
+    <valpo-content class="npe flex-rows align-center">
       <h2>What is the New Pirate Economy?</h2>
 
       <valpo-two-col-section>
@@ -68,6 +71,7 @@ import ValpoTwoColSection from "@/components/ValpoTwoColSection"
 
 import logo from "../assets/images/logo-valparaiso.svg";
 import npe from "../assets/images/headers/npe.jpg";
+import ship from "../assets/images/headers/ship.jpg";
 import iconEconomy from "../assets/images/icons/pirate_economy.svg"
 
 export default {
@@ -81,7 +85,7 @@ export default {
     ValpoTwoColSection
   },
   data: () => ({
-    images: { logo, npe, iconEconomy }
+    images: { logo, npe, iconEconomy, ship }
   })
 };
 </script>
@@ -89,14 +93,16 @@ export default {
 <style lang="scss" scoped>
 section.splash {
   background-position-y: 100%;
-  .logo {
-    max-width: 400px;
-    width: 90%;
-    margin-bottom: 3em;
+  &:after {
+    background: linear-gradient(to bottom, rgba(0, 99, 135, 0) 0%, var(--color-mustard) 94%, var(--color-mustard) 100%);
+    z-index: 0;
   }
 }
+.manifesto{
+  background: var(--color-mustard)
+}
 .npe {
-  background: #ffa953;
+  background: linear-gradient(to bottom, var(--color-mustard) 60%, var(--color-cerulean) 100%);
   padding-bottom: calc(var(--tracking-large) * 5);
   padding-top: calc(var(--tracking-large) * 5);
   .icons {

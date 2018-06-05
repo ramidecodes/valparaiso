@@ -39,14 +39,6 @@ import ValpoContent from "@/components/ValpoContent";
 import ValpoButton from "@/components/ValpoButton";
 import ValpoTwoColSection from "@/components/ValpoTwoColSection"
 
-import logo from "../assets/images/logo-valparaiso.svg";
-import giuliana from "../assets/images/image-giuliana.jpg";
-import beach from "../assets/images/image-beach.jpg";
-
-import light from "../assets/images/image-light.jpg";
-import qr from "../assets/images/image-qr.jpg";
-import birds from "../assets/images/image-birds.jpg";
-
 export default {
   name: "Error",
   components: {

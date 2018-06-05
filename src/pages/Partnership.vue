@@ -1,8 +1,7 @@
 <template>
   <main role="main" id="partnership">
-
-    <valpo-splash class="splash" :image="images.giuliana">
-      <img v-lazy="images.logo" class="logo" alt="Adventures of the Valparaiso" /><br>
+    <valpo-splash class="splash" :image="images.partnership">
+      <h1>Become our Partner</h1>
     </valpo-splash>
 
     <valpo-content class="partnership flex-rows align-center">
@@ -25,7 +24,7 @@
         Please contact our crew if you are interested or would like to learn more.
       </p>
       <p>
-        <valpo-button class="button terracota" label="Send us an email!"></valpo-button>
+        <valpo-button class="button magenta" label="Send us an email!"></valpo-button>
       </p>
 
     </valpo-content>
@@ -41,18 +40,13 @@ import ValpoButton from "@/components/ValpoButton";
 import ValpoTwoColSection from "@/components/ValpoTwoColSection"
 
 import logo from "../assets/images/logo-valparaiso.svg";
-import giuliana from "../assets/images/image-giuliana.jpg";
-import beach from "../assets/images/image-beach.jpg";
+import partnership from "../assets/images/headers/partnership.jpg";
 
 import iconBuilding from "../assets/images/icon-building.svg";
 import iconDesign from "../assets/images/icon-design.svg";
 import iconVideo from "../assets/images/icon-video.svg";
 import iconMarketing from "../assets/images/icon-marketing.svg";
 import iconSocial from "../assets/images/icon-social.svg";
-
-import light from "../assets/images/image-light.jpg";
-import qr from "../assets/images/image-qr.jpg";
-import birds from "../assets/images/image-birds.jpg";
 
 export default {
   name: "Partnership",
@@ -65,63 +59,28 @@ export default {
     ValpoTwoColSection
   },
   data: () => ({
-    images: { logo, giuliana, beach },
-    video: {
-      src: "https://fat.gfycat.com/HighlevelZestyAxolotl.webm",
-      loop: true
-    },
-    tasks: [
-      {
-        icon: iconBuilding,
-        alt: "Building / Repairing"
-      },
-      {
-        icon: iconDesign,
-        alt: "Design"
-      },
-      {
-        icon: iconVideo,
-        alt: "Photography / Video"
-      },
-      {
-        icon: iconMarketing,
-        alt: "Marketing"
-      },
-      {
-        icon: iconSocial,
-        alt: "Social Media"
-      }
-    ],
-    projects: [
-      {
-        image: light,
-        title: "We're upgrading our ship!"
-      },
-      {
-        image: qr,
-        title: "The pirate app"
-      },
-      {
-        image: birds,
-        title: "Into the Woods festival"
-      }
-    ]
+    images: { logo, partnership },
   })
 };
 </script>
 
 <style lang="scss" scoped>
-.splash {
-  .logo {
-    max-width: 400px;
-    width: 90%;
+section.splash {
+  background-position-y: 133%;
+  &:after {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 99, 135, 0) 0%,
+      var(--color-ocean) 94%,
+      var(--color-ocean) 100%);
+    z-index: 0;
   }
 }
 .partnership {
   background: linear-gradient(
     to bottom,
     var(--color-ocean) 0%,
-    rgba(0, 175, 187, 1) 100%
+    var(--color-cerulean) 100%
   );
   padding-bottom: calc(var(--tracking-large) * 5);
   padding-top: calc(var(--tracking-large) * 5);

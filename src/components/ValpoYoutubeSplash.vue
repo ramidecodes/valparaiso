@@ -103,7 +103,7 @@ export default {
   }
   h1 {
     display: initial;
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: bold;
     text-shadow: 0 1px 3px #333;
   }

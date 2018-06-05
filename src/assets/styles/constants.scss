@@ -6,7 +6,7 @@
 
   // --wrapper-width: 1366px;
   // What's the best way to avoid the original boxed layout?
-  --wrapper-width: v-width;
+  --wrapper-width: 100vw;
 
   --spacing: 0rem;
   --line-height: 1.5;
@@ -16,6 +16,7 @@
   --spacing-small: 0.1em;
   --section-bottom-margin: 2rem;
 
+  --color-dark-text: #333;
   --color-light: #fcfefe;
   --color-dark: #000;
 
@@ -26,4 +27,6 @@
   --color-elephant: #103240;
   --color-terracota: #dc6f2d;
   --color-robroy: #dda858;
+  --color-magenta: #db0e5a;
+  --color-mustard: #ffa953;
 }

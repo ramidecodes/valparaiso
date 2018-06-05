@@ -53,9 +53,13 @@ export default {
     position: relative;
     width: 100%;
     z-index: 15;
+    top: -25px;
   }
   h1 {
     display: initial;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: 0 0 6px #555;
   }
   q {
     font-size: 1.5rem;

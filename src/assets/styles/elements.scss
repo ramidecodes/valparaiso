@@ -38,6 +38,10 @@
     background: var(--color-terracota);
     color: var(--color-light);
   }
+  &.magenta {
+    background: var(--color-magenta);
+    color: var(--color-light);
+  }
   &.large {
     font-size: 1.3em;
     outline: none;
@@ -50,7 +54,8 @@
   }
 }
 .lead-paragraph{
-  color: var(--color-lagoon);
+  color: white;
   font-size: var(--lead-size);
   font-weight: bold;
+  z-index: 1;
 }

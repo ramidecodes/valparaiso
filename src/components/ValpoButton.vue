@@ -1,5 +1,6 @@
+<!-- @TODO: Fix animation on hover -->
 <template>
-  <button>
+  <button class="animated">
     <span>{{ label }}</span>
   </button>
 </template>
@@ -22,6 +23,26 @@ export default {
       type: String,
       required: false,
       default: ""
+    }
+  },
+  methods: {
+
+  },
+  computed: {
+    doBounce: function() {
+      this.$_anime({
+        targets: '.bounce',
+        translateY: '50vh',
+        duration: 300,
+        loop: false,
+        direction: 'alternate',
+        easing: 'easeInCubic',
+        scaleX: {
+          value: 1.05,
+          duration: 150,
+          delay: 268
+        }
+      })
     }
   }
 };

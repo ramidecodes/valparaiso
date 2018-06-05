@@ -20,6 +20,7 @@
     "vue": "^2.5.2",
     "vue-axios": "^2.0.2",
     "vue-lazyload": "^1.1.4",
+    "vue-recaptcha": "^1.1.1",
     "vue-router": "^3.0.1",
     "vue-touch": "^1.1.0",
     "vue-youtube": "^1.2.5",

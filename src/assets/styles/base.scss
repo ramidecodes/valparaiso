@@ -69,10 +69,12 @@ a {
     color: var(--color-light);
   }
   &:hover {
-    color: var(--color-terracota);
+    text-shadow: 0 0 5px #444;
+    // color: var(--color-terracota);
   }
   &:active {
-    color: var(--color-terracota);
+    text-shadow: 0 0 5px #444;
+    // color: var(--color-terracota);
   }
 }
 

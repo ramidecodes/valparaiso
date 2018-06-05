@@ -15,7 +15,7 @@
         <li v-on:click="menuIsActive = !menuIsActive"><router-link :to="{ name: 'Npe'}">New Pirate Economy</router-link></li>
         <li v-on:click="menuIsActive = !menuIsActive"><router-link :to="{ name: 'Volunteer'}">Volunteer</router-link></li>
         <li v-on:click="menuIsActive = !menuIsActive"><router-link :to="{ name: 'Partnership'}">Partnership</router-link></li>
-        <li v-on:click="menuIsActive = !menuIsActive"><router-link :to="{ name: 'Events'}">Events</router-link></li>
+        <li v-on:click="menuIsActive = !menuIsActive"><router-link :to="{ name: 'Activities'}">Activities</router-link></li>
         <li v-on:click="menuIsActive = !menuIsActive"><router-link :to="{ name: 'Contact'}">Contact</router-link></li>
       </ul>
     </nav>
@@ -34,7 +34,7 @@ export default {
   },
   data: () => ({
     images: [ logo ],
-    menuItems: ["Index", "About", "Npe", "Volunteer", "Partnership", "Events", "Contact"],
+    menuItems: ["Index", "About", "Npe", "Volunteer", "Partnership", "Activities", "Contact"],
     menuIsActive: false
   }),
 }
