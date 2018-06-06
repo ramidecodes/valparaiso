@@ -1,71 +1,19 @@
 <template lang="html">
 <section id="timeline" class="timeline">
 	<div class="card-wrapper">
-		<div class="card card--step1">
+		<div class="card" v-for="(item, index) in items">
 			<div class="head">
 				<div class="date-box">
-					<span>23 of May - 2012</span>
+					<span class="day">{{item.day}}</span></br>
+          <span class="year">{{item.year}}</span>
 				</div>
-				<h2>Birth</h2>
+				<h2>{{item.title}}</h2>
 			</div>
 			<div class="body">
-        <p>The ship is found and the adventure begins! The 100 year old canal vessel and the nomadic Dutchman make their first journey towards their new life, with little idea of how many faces, stories, experiences and lessons they will encounter in their first exhilarating years together.</p>
-        <img src="http://placehold.it/1000x500" alt="Graphic">
+        <p>{{item.description}}</p>
+        <img v-lazy="item.image" :alt="item.title">
 			</div>
 		</div>
-
-		<div class="card card--step2">
-			<div class="head">
-				<div class="date-box">
-					<span>02</span>
-				</div>
-				<h2><span class="small">Subtitle</span> Confidence</h2>
-			</div>
-			<div class="body">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-				<img src="http://placehold.it/1000x500" alt="Graphic">
-			</div>
-		</div>
-
-		<div class="card card--step3">
-			<div class="head">
-				<div class="date-box">
-					<span>03</span>
-				</div>
-				<h2><span class="small">Subtitle</span> Adaptation</h2>
-			</div>
-			<div class="body">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-				<img src="http://placehold.it/1000x500" alt="Graphic">
-			</div>
-		</div>
-
-		<div class="card card--step4">
-			<div class="head">
-				<div class="date-box">
-					<span>04</span>
-				</div>
-				<h2><span class="small">Subtitle</span> Consistency</h2>
-			</div>
-			<div class="body">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-				<img src="http://placehold.it/1000x500" alt="Graphic">
-			</div>
-		</div>
-
-		<div class="card card--step5">
-			<div class="head">
-				<div class="date-box">
-					<span>05</span>
-				</div>
-				<h2><span class="small">Subtitle</span> Conversion</h2>
-			</div>
-			<div class="body">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.</p>
-				<img src="http://placehold.it/1000x500" alt="Graphic">
-			</div>
-		</div>
-
 	</div>
 </section>
 </template>
@@ -77,10 +25,81 @@ export default {
   data: () => ({
     items: [
       {
-        date: "23 of May",
-        title: "My Item",
-        description: "This is an item with text",
-        image: ""
+        day: "23 of May",
+        year: "2012",
+        title: "Birth",
+        description: "The ship is found and the adventure begins! The 100 year old canal vessel and the nomadic Dutchman make their first journey towards their new life, with little idea of how many faces, stories, experiences and lessons they will encounter in their first exhilarating years together.",
+        image: "http://placehold.it/450x250"
+      },
+      {
+        day: "23 of Jan",
+        year: "2013",
+        title: "Building",
+        description: "While transforming the boat into a stained glass art studio, the Captain welcomes volunteers from a global community of artists, travellers and tradesmen. The adventurous souls sharing their skills and creativity onboard quickly become an essential part of the Valparaiso story.",
+        image: "http://placehold.it/450x250"
+      },
+      {
+        day: "10 of Dec",
+        year: "2013",
+        title: "Moving to Amsterdam",
+        description: "It is time to broaden the Valparaiso horizons and she sets sail for Amsterdam! Here the Captain finds significantly more opportunities for creative collaborations, access to resources and an ever-widening circle of volunteers and kindred projects. An exciting new chapter begins!",
+        image: "http://placehold.it/450x250"
+      },
+      {
+        day: "15 of Jul",
+        year: "2014",
+        title: "Collaboration",
+        description: "The boat becomes a hub where artists meet to combine resources, abilities and ideas toward a vital creative life source, ART! The now-established onboard culture endorses the belief that creativity is essential to our happiness and survival, both as individuals and as a global family.",
+        image: "http://placehold.it/450x250"
+      },
+      {
+        day: "12 of Ago",
+        year: "2015",
+        title: "Festivals",
+        description: "Summer! Deck and doors are thrown open and creativity and stories are used to form inviting bridges into several waterside festival communities. These are wildly successful events and many land and boat participants join in celebrating the Valparaiso culture.",
+        image: "http://placehold.it/450x250"
+      },
+      {
+        day: "6 of Nov",
+        year: "2015",
+        title: "Making the Plan",
+        description: "The boat becomes a hub where artists meet to combine resources, abilities and ideas toward a vital creative life source, ART! The now-established onboard culture endorses the belief that creativity is essential to our happiness and survival, both as individuals and as a global family.",
+        image: "http://placehold.it/450x250"
+      },
+      {
+        day: "26 of Feb",
+        year: "2016",
+        title: "Help us find a boat!",
+        description: "Do you believe that this progressive culture can create mutually rewarding connections, that this ship can be a place where sustainability and art unite and that you can be a part of this destination? Share it on facebook , ask family and friends. spread the word",
+        image: "http://placehold.it/450x250"
+      },
+      {
+        day: "5 of May",
+        year: "2016",
+        title: "Freedom Festival",
+        description: "We where invited at various festivals to display our concept and show the onboard art. One of them was Vrijland where freedom was celebrated. Checkout the video at 2:17",
+        image: "http://placehold.it/450x250"
+      },
+      {
+        day: "13 of Jul",
+        year: "2016",
+        title: "Brest Maritima",
+        description: "We stepped on the shore and went to France to explain our concept. Also we showed on the fly how stained glass is being made.",
+        image: "http://placehold.it/450x250"
+      },
+      {
+        day: "9 of Sep",
+        year: "2016",
+        title: "New Pirate Economy!",
+        description: "We kicked off our New Pirate Economy for the first time on the shore! Not on the water anymore but we made a trade-tent where people could trade goods against stories.Also we rented out friends that could help people that lost their friends or their keys! For free offcourse ;)",
+        image: "http://placehold.it/450x250"
+      },
+      {
+        day: "1 of Sep",
+        year: "2019",
+        title: "First Journy with the New Boat",
+        description: "The sails will be unfurled and the course set! Exact date unknown.",
+        image: "http://placehold.it/450x250"
       }
     ]
   }),
@@ -88,6 +107,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+// You have to manually define the amount of items in the timeline
+$items: 11;
+
 /* Media Queries */
 
 @mixin mq-xs {
@@ -120,12 +143,11 @@ $background: transparent;
 $box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.5);
 // $border: 1px solid var(--color-cerulean);
 $border: none;
-$items: 5;
 $rows: ceil($items/2);
 
 /* Card sizing */
 
-$card-height: 600px;
+$card-height: 500px;
 $card-width: 450px;
 $inner-margin: 15px;
 $number-size: 22px;
@@ -158,8 +180,8 @@ $marker-dist: $card-width + $outer-margin/2 - $marker-size/2;
     content: "";
     width: 0;
     height: 0;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
+    border-top: 38px solid transparent;
+    border-bottom: 38px solid transparent;
   }
   %marker {
     position: absolute;
@@ -239,7 +261,7 @@ $counter: $items - $rows + 2;
         margin-right: $outer-margin/2;
         .head::after {
           @extend %arrow;
-          border-left-width: 15px;
+          border-left-width: 45px;
           border-left-style: solid;
           left: 100%;
         }
@@ -252,7 +274,7 @@ $counter: $items - $rows + 2;
         margin-left: $outer-margin/2;
         .head::after {
           @extend %arrow;
-          border-right-width: 15px;
+          border-right-width: 45px;
           border-right-style: solid;
           right: 100%;
         }
@@ -274,24 +296,28 @@ $counter: $items - $rows + 2;
       .date-box {
         display: inline;
         float: left;
-        margin: $inner-margin;
-        padding: 10px;
-        font-size: $number-size;
-        line-height: $number-size;
-        font-weight: 600;
+        margin: 0;
+        padding: 10px 10px 2px;
+        line-height: 1.2;
         background: rgba(0, 0, 0, 0.17);
+        .day {
+          font-weight: 300;
+          font-size: 18px;
+        }
+        .year {
+          font-weight: bold;
+          font-size: 36px;
+        }
       }
       h2 {
         text-transform: uppercase;
         font-size: 1.4rem;
+        line-height: 1;
         font-weight: bold;
-        // letter-spacing: 2px;
         margin: 0;
-        padding-bottom: 6px;
-        line-height: 1rem;
         @include mq-sm {
-          font-size: 165%;
-          line-height: 1.2rem;
+          font-size: 145%;
+          line-height: 1;
         }
         span {
           display: block;
@@ -307,29 +333,25 @@ $counter: $items - $rows + 2;
       background: var(--color-cerulean);
       border: $border;
       border-top: 0;
-      padding: $inner-margin;
+      padding: $inner-margin 0 0;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
       @include mq-lg {
         height: $body-height;
       }
       p {
         font-size: var(--font-size);
-        text-align: justify;
+        text-align: left;
         line-height: 1.2;
         margin-bottom: $inner-margin;
       }
       img {
-        display: block;
         width: 100%;
       }
     }
-    @for $i from 1 through $items {
-      &--step#{$i} {
-        $color: nth($colors, ((($i - 1) % 4) + 1));
-        background-color: $color;
-        .head::after {
-          border-color: $color;
-        }
-      }
+    .head::after {
+      border-color: var(--color-cerulean);
     }
   }
 }

@@ -13,12 +13,12 @@
         </span>
         <figcaption class="event-text">
           {{ event.body }}<br><br>
-            <p class="event-cta align-right">
-              <valpo-button class="button terracota small" :label="`Join this ${event.type}`"></valpo-button>
-            </p>
-          </figcaption>
-        </figure>
-      </li>
+          <p class="event-cta align-right">
+            <valpo-button class="button terracota small" :label="`Join this ${event.type}`"></valpo-button>
+          </p>
+        </figcaption>
+      </figure>
+    </li>
   </ul>
 </template>
 
