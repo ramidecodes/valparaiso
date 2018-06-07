@@ -43,12 +43,18 @@ export default {
   background-size: cover;
   padding-top: calc(var(--tracking-large) * 5);
   .message {
-    width: 50%;
+    width: 60%;
     align-self:flex-start;
     padding-top: 1em;
+    @media (max-width: 1280px) {
+      width: 70%;
+    }
+    @media (max-width: 1100px) {
+      width: 100%;
+    }
     p {
     font-size: 22px;
-}
+    }
   }
 }
 </style>

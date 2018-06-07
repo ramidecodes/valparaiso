@@ -1,6 +1,7 @@
 <template>
-  <ul class="events-list flex-center">
-    <li class="event flex-child" v-for="(event, index) in events" :key="index" v-link="{ url: event.url, target: '_blank' }">
+  <ul class="events-list">
+    <li class="event"><valpo-fb-events/></li>
+    <li class="event" v-for="(event, index) in events" :key="index" v-link="{ url: event.url, target: '_blank' }">
       <h4 class="event-title">
         {{ event.title }}
           <span class="event-date">
@@ -24,6 +25,7 @@
 
 <script>
 import ValpoButton from "@/components/ValpoButton";
+import ValpoFbEvents from "@/components/ValpoFbEvents";
 
 import event01 from "../assets/images/image-event01.jpg";
 import event02 from "../assets/images/image-event02.jpg";
@@ -31,7 +33,7 @@ import event03 from "../assets/images/image-event03.jpg";
 
 export default {
   name: "Events",
-  components: { ValpoButton },
+  components: { ValpoButton, ValpoFbEvents },
   data: () => ({
     events: [
       {
@@ -68,19 +70,23 @@ export default {
 
 <style lang="scss" scoped>
 .events-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 0 10% 0;
   margin-top: calc(var(--tracking-large) * 5);
-  // &:hover .event:not(:hover) {
-  //     opacity: 0.8;
-  //     filter: grayscale(80%);
-  // }
+  &:hover .event:not(:hover) {
+      opacity: 0.8;
+      filter: grayscale(80%);
+  }
   .event {
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 3px;
+    border-radius: 5px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     cursor: pointer;
     list-style-type: none;
-    margin-bottom: calc(var(--tracking-large) * 2);
-    max-width: 486px;
+    margin-bottom: calc(var(--tracking-large) * 5);
+    max-width: 410px;
     position: relative;
     text-align: left;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -110,7 +116,7 @@ export default {
       border-top-left-radius: 3px;
       border-top-right-radius: 3px;
       color: var(--color-ocean);
-      font-size: 1.3rem;
+      font-size: 1rem;
       font-weight: bold;
       left: 0;
       letter-spacing: 1px;

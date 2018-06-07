@@ -208,8 +208,8 @@ export default {
           font-family: "BentonSans Cond";
           padding-top: 0;
           .project-description {
-            font-weight: 300;
             padding-top: 5px;
+            font-weight: 300;
           }
         }
       }

@@ -28,5 +28,8 @@ export default {
   h1{
     margin-bottom: 1em;
   }
+  @media (max-width: 550px) {
+    padding: 2em 2em;
+  }
 }
 </style>

@@ -10,9 +10,8 @@
         Be part of the <strong>New Pirate Economy</strong> by participating in our monthly activities.
       </p>
 
-      <valpo-fb-events/>
-
       <valpo-events/>
+
     </valpo-content>
   </main>
 </template>
@@ -24,7 +23,6 @@ import ValpoList from "@/components/ValpoList";
 import ValpoListItem from "@/components/ValpoListItem";
 import ValpoButton from "@/components/ValpoButton";
 import ValpoEvents from "@/components/ValpoEvents";
-import ValpoFbEvents from "@/components/ValpoFbEvents";
 
 import stories from "@/assets/images/headers/trade-stories.jpg";
 
@@ -36,8 +34,7 @@ export default {
     ValpoList,
     ValpoListItem,
     ValpoButton,
-    ValpoEvents,
-    ValpoFbEvents
+    ValpoEvents
   },
   data: () => ({
     images: { stories }

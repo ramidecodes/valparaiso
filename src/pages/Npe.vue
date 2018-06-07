@@ -130,7 +130,10 @@ section.splash {
     }
   }
   img.economy {
-    max-width: 60%;
+    max-width: 65%;
+    @media (max-width: 550px) {
+      max-width: 100%;
+    }
   }
 }
 .form {

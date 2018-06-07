@@ -1,7 +1,7 @@
 <template lang="html">
 <section id="timeline" class="timeline">
 	<div class="card-wrapper">
-		<div class="card" v-for="(item, index) in items">
+		<div class="card" v-for="item in items">
 			<div class="head">
 				<div class="date-box">
 					<span class="day">{{item.day}}</span></br>
@@ -122,7 +122,7 @@ export default {
 
 <style lang="scss" scoped>
 
-// You have to manually define the amount of items in the timeline
+// You have to manually define the amount of items in the timeline !!
 $items: 11;
 
 /* Media Queries */
@@ -258,12 +258,12 @@ $counter: $items - $rows + 2;
     margin: 10px auto 80px;
     max-width: 94%;
     z-index: 2;
+		box-shadow: $box-shadow;
     @include mq-sm {
-      max-width: 60%;
-      box-shadow: $box-shadow;
+      max-width: 70%;
     }
     @include mq-md {
-      max-width: 40%;
+      max-width: 70%;
     }
     @include mq-lg {
       max-width: $card-width;
@@ -316,11 +316,11 @@ $counter: $items - $rows + 2;
         background: rgba(0, 0, 0, 0.17);
         .day {
           font-weight: 300;
-          font-size: 18px;
+          font-size: 14px;
         }
         .year {
           font-weight: bold;
-          font-size: 36px;
+          font-size: 28px;
         }
       }
       h2 {
@@ -329,8 +329,12 @@ $counter: $items - $rows + 2;
         line-height: 1;
         font-weight: bold;
         margin: 0;
-        @include mq-sm {
-          font-size: 145%;
+        @include mq-xs {
+          font-size: 1rem;
+          line-height: 1;
+        }
+				@include mq-md {
+          font-size: 1.2rem;
           line-height: 1;
         }
         span {

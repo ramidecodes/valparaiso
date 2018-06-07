@@ -24,7 +24,7 @@
         Please contact our crew if you are interested or would like to learn more.
       </p>
       <p>
-        <valpo-button class="button magenta" label="Send us an email!"></valpo-button>
+        <valpo-button class="button magenta" label="Send us a message"></valpo-button>
       </p>
 
     </valpo-content>

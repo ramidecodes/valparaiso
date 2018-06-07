@@ -64,6 +64,9 @@ export default {
   q {
     font-size: 1.5rem;
     font-weight: 500;
+    @media (max-width: 550px) {
+      font-size: 1.2rem;
+    }
   }
 }
 </style>

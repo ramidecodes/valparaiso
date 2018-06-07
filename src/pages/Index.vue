@@ -26,7 +26,7 @@
 
     <valpo-content id="involved" class="involved flex-rows fixed-pseudo" v-lazy:background-image="images.hand">
       <h2>Get involved!</h2>
-      <valpo-list class="icons flex-around">
+      <valpo-list class="icons flex-center">
         <valpo-list-item v-for="(item) in involved" :key="item.icon">
           <router-link :to="{ name: item.link }">
             <figure>
@@ -228,7 +228,6 @@ section.splash {
       margin-top: calc(var(--tracking-large) * 7);
     }
     li {
-      width: 20%;
       img {
         height: 145px;
       }

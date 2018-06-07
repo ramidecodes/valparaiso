@@ -1,6 +1,6 @@
 <template>
-  <section id="socialmedia" class="socialmedia flex-between">
-    <valpo-list class="icons flex-center">
+  <section id="socialmedia" class="socialmedia">
+    <valpo-list class="icons flex-between">
       <valpo-list-item v-for="(item) in socialicons" :key="item.icon">
         <router-link :to="{ name: item.alt, params: {} }">
           <img v-lazy="item.icon" :alt="item.alt">
@@ -56,7 +56,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 .socialmedia {
   height: 70px;

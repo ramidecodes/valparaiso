@@ -1,6 +1,6 @@
 <template>
   <footer id="footer" class="footer content flex-around">
-    <div>
+    <div class="socialmedia">
       <h4 class="align-center">Join us on our journey!</h4>
       <valpo-socialmedia/>
     </div>
@@ -57,6 +57,9 @@ export default {
     margin-top: calc(var(--tracking-large) * 1);
     max-width: 250px;
   }
+  .socialmedia {
+    align-self: center;
+}
 }
 @media (max-width: 550px){
   footer li.valpo-list-item {

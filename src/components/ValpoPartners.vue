@@ -66,8 +66,8 @@ export default {
         alt: "Glas in Loot Boot"
       },
       {
-        icon: horeca,
-        alt: "Horeka"
+        icon: tastebefore,
+        alt: "Taste Before You Waste"
       },
       {
         icon: leds4life,
@@ -86,8 +86,8 @@ export default {
         alt: "European Commission"
       },
       {
-        icon: tastebefore,
-        alt: "Taste Before You Waste"
+        icon: horeca,
+        alt: "Horeka"
       }
     ]
   })
@@ -117,7 +117,13 @@ export default {
   }
   img {
     margin-top: calc(var(--tracking-large) * 1);
-    max-width: 100px;
+    max-width: 80px;
+  }
+  img[alt="53 Nord"] {
+    border-radius: 10px;
+  }
+  img[alt="Aweken & More"] {
+    max-width: 110px
   }
   .valpo-list {
     margin: 1em 0;
@@ -125,6 +131,14 @@ export default {
   .valpo-list-item {
     margin: 0 1vw;
     vertical-align: middle;
+    @media (max-width: 550px) {
+      max-width: 40%;
+    }
+    figure {
+      @media (max-width: 550px) {
+        margin: .5em auto;
+      }
+    }
   }
 }
 </style>
