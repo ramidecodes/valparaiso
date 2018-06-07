@@ -133,7 +133,7 @@ export default {
   data: () => ({
     images: { logo, ship, boat, hand },
     video: {
-      src: "cjC9ggS7EVE"
+      src: "r4Zm6H12WbM"
     },
     involved: [
       {

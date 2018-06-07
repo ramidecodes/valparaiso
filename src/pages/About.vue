@@ -71,7 +71,7 @@ import david from "../assets/images/crew/valparaiso-crew-dave.jpg";
 import ramiro from "../assets/images/crew/Ramiro_Ramirez_crew.jpg";
 import lyvia from "../assets/images/crew/valparaiso-crew-lyvia.jpg";
 import jen from "../assets/images/crew/valparaiso-crew-jennie.jpg";
-import yoram from "../assets/images/crew/yoram.jpg";
+import yoram from "../assets/images/crew/yoram.jpeg";
 
 export default {
   name: "About",
