@@ -19,6 +19,20 @@
 </template>
 
 <script>
+// Images
+import birth from "../assets/images/timeline/birth-valparaiso.jpg";
+import building from "../assets/images/timeline/building.jpg";
+import moving from "../assets/images/timeline/moving-to-amsterdam.jpg";
+import collaborations from "../assets/images/timeline/colaborations2.jpg";
+import festivals from "../assets/images/timeline/festivals.jpg";
+import theplan from "../assets/images/timeline/making-the-plan.jpg";
+import findaboat from "../assets/images/timeline/help-us-find-a-boat.jpg";
+import freedom from "../assets/images/timeline/freedom-festival.jpg";
+import france from "../assets/images/timeline/france.jpg";
+import trade from "../assets/images/timeline/pirate-economy-trade.jpg";
+import newboat from "../assets/images/timeline/new-bote.jpg";
+
+
 export default {
   name: "ValpoTimeline",
   // components: {},
@@ -29,77 +43,77 @@ export default {
         year: "2012",
         title: "Birth",
         description: "The ship is found and the adventure begins! The 100 year old canal vessel and the nomadic Dutchman make their first journey towards their new life, with little idea of how many faces, stories, experiences and lessons they will encounter in their first exhilarating years together.",
-        image: "http://placehold.it/450x250"
+        image: birth
       },
       {
         day: "23 of Jan",
         year: "2013",
         title: "Building",
         description: "While transforming the boat into a stained glass art studio, the Captain welcomes volunteers from a global community of artists, travellers and tradesmen. The adventurous souls sharing their skills and creativity onboard quickly become an essential part of the Valparaiso story.",
-        image: "http://placehold.it/450x250"
+        image: building
       },
       {
         day: "10 of Dec",
         year: "2013",
         title: "Moving to Amsterdam",
         description: "It is time to broaden the Valparaiso horizons and she sets sail for Amsterdam! Here the Captain finds significantly more opportunities for creative collaborations, access to resources and an ever-widening circle of volunteers and kindred projects. An exciting new chapter begins!",
-        image: "http://placehold.it/450x250"
+        image: moving
       },
       {
         day: "15 of Jul",
         year: "2014",
         title: "Collaboration",
         description: "The boat becomes a hub where artists meet to combine resources, abilities and ideas toward a vital creative life source, ART! The now-established onboard culture endorses the belief that creativity is essential to our happiness and survival, both as individuals and as a global family.",
-        image: "http://placehold.it/450x250"
+        image: collaborations
       },
       {
         day: "12 of Ago",
         year: "2015",
         title: "Festivals",
         description: "Summer! Deck and doors are thrown open and creativity and stories are used to form inviting bridges into several waterside festival communities. These are wildly successful events and many land and boat participants join in celebrating the Valparaiso culture.",
-        image: "http://placehold.it/450x250"
+        image: festivals
       },
       {
         day: "6 of Nov",
         year: "2015",
         title: "Making the Plan",
-        description: "The boat becomes a hub where artists meet to combine resources, abilities and ideas toward a vital creative life source, ART! The now-established onboard culture endorses the belief that creativity is essential to our happiness and survival, both as individuals and as a global family.",
-        image: "http://placehold.it/450x250"
+        description: "Brainstorming and discussions have been churning away for awhile and now there is definite and increasing momentum in the Valparaiso currents. With expanding skill and vision, Captain and community earnestly prepare to (officially) launch the next grand adventure!",
+        image: theplan
       },
       {
         day: "26 of Feb",
         year: "2016",
         title: "Help us find a boat!",
         description: "Do you believe that this progressive culture can create mutually rewarding connections, that this ship can be a place where sustainability and art unite and that you can be a part of this destination? Share it on facebook , ask family and friends. spread the word",
-        image: "http://placehold.it/450x250"
+        image: findaboat
       },
       {
         day: "5 of May",
         year: "2016",
         title: "Freedom Festival",
         description: "We where invited at various festivals to display our concept and show the onboard art. One of them was Vrijland where freedom was celebrated. Checkout the video at 2:17",
-        image: "http://placehold.it/450x250"
+        image: freedom
       },
       {
         day: "13 of Jul",
         year: "2016",
         title: "Brest Maritima",
         description: "We stepped on the shore and went to France to explain our concept. Also we showed on the fly how stained glass is being made.",
-        image: "http://placehold.it/450x250"
+        image: france
       },
       {
         day: "9 of Sep",
         year: "2016",
         title: "New Pirate Economy!",
         description: "We kicked off our New Pirate Economy for the first time on the shore! Not on the water anymore but we made a trade-tent where people could trade goods against stories.Also we rented out friends that could help people that lost their friends or their keys! For free offcourse ;)",
-        image: "http://placehold.it/450x250"
+        image: trade
       },
       {
-        day: "1 of Sep",
+        day: "X of Sep",
         year: "2019",
         title: "First Journy with the New Boat",
         description: "The sails will be unfurled and the course set! Exact date unknown.",
-        image: "http://placehold.it/450x250"
+        image: newboat
       }
     ]
   }),
@@ -337,6 +351,7 @@ $counter: $items - $rows + 2;
       display: flex;
       flex-flow: column nowrap;
       justify-content: space-between;
+      overflow: hidden;
       @include mq-lg {
         height: $body-height;
       }

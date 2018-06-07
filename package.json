@@ -2,7 +2,7 @@
   "name": "valparaiso",
   "version": "1.0.0",
   "description": "Valparaiso website",
-  "author": "Timo Heddes <timoheddes@gmail.com>",
+  "author": "Ecovirtual & Timo Heddes",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
