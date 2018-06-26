@@ -19,8 +19,8 @@
     <div class="field textarea">
         <textarea name="contactMessage" v-model="contactMessage" rows="8" cols="80" placeholder="Your message..."></textarea>
     </div>
-    <button type="submit" class="button magenta">Send Message</button>
-    <valpo-recaptcha/>
+    <button type="submit" class="button magenta" disabled>Send Message</button>
+    <!-- <valpo-recaptcha/> -->
   </form>
 </template>
 

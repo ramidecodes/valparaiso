@@ -8,7 +8,8 @@
           We're always on the lookout for new visions and ideas!
           <br><br>
         </p>
-        <ValpoContactForm/>
+        <p>Sends us an email to crew@adventuresofthevalparaiso.com</p>
+        <!-- <ValpoContactForm/> -->
       </section>
     </valpo-content>
   </main>

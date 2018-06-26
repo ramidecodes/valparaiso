@@ -10,7 +10,7 @@
     </p>
     <p class="align-center">
       Stichting Adventures of the Valparaiso.<br>
-      NL86TRIO2205 4507 27
+      NL32TRIO0338494154
       <br>&copy; 2014-{{thisYear}} All rights (and lefts) reserved.<br><br>
       Site by <router-link :to="{ name: 'About', params: { focus: 'crew' }}" title="Art &amp; Design">Alexis Camejo</router-link> &amp; <router-link :to="{ name: 'About', params: { focus: 'crew' }}" title="Development">Timo Heddes & Ecovirtual</router-link>
     </p>
