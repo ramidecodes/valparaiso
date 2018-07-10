@@ -11,9 +11,9 @@
         History of the Valparaiso
       </h2>
       <valpo-two-col-section>
-        <p>Valparaiso is a city located on the coastline of Chile, between the Andes and the Pacific Ocean. It was named afterby the Spanish conquerors when their ships moored upon the shores over five hundred years ago. It was the closest port city that lay along the path to a place which was considered paradise by these sailors after a long enduring journey.
+        <p>Valparaiso is a city located on the coastline of Chile, between the Andes and the Pacific Ocean. It was named by the Spanish conquerors when their ships moored upon the shores over five hundred years ago. It was the closest port city that lay along the path to a place which was considered paradise by these sailors after a long enduring journey.
         </p>
-        <p>Ulysses, a dutch traveler, came to the city by coincidence. With his motorcycle left broken on the roadside in Argentina, he resorted to hitchhiking to continue his journey and found his way to Valparaiso.</p>
+        <p>Ulysses, a Dutch traveler, came to the city by coincidence. With his motorcycle left broken on the roadside in Argentina, he resorted to hitchhiking to continue his journey and found his way to Valparaiso.</p>
         <p>As he travelled through the rough exterior he began to look more into the interior of the city. He fell in love with the bohemian and artistic winds within the city and found a limitless source of inspiration. Like dirty nails and worn hands, the city had its own beauty beneath the surface.</p>
       </valpo-two-col-section>
       <h4>His compass turned upside down</h4>
@@ -97,8 +97,7 @@ export default {
       {
         image: margo,
         name: "Margo Muttart",
-        title: "Commander",
-
+        title: "Event Organization",
       },
       {
         image: alexis,
@@ -107,31 +106,28 @@ export default {
       },
       {
         image: david,
-        name: "David Delgado",
-        title: "Developer & Party Lieutenant",
-
+        name: "Dave Dega",
+        title: "App Developer",
       },
       {
         image: jen,
-        name: "Jen",
+        name: "Jennie Hughes",
         title: "Treasurer",
-
       },
       {
         image: lyvia,
-        name: "Lyvia",
-        title: "Wind of the East",
-
+        name: "Lyvia Lozano",
+        title: "Partner Contacts",
       },
       {
         image: yoram,
         name: "Yoram ",
-        title: "Chief Technician",
+        title: "Sailor",
       },
       {
         image: ramiro,
         name: "Ramiro Ramirez",
-        title: "Developer & Dub Officer",
+        title: "Web Developer",
       }
     ]
   })

@@ -12,7 +12,6 @@
 
 <script>
 import north53 from "../assets/images/partners/53gradennoord.jpg";
-import awaken from "../assets/images/partners/Awaken_More_partners.png";
 import azart from "../assets/images/partners/Azart_partners.png";
 import elektro from "../assets/images/partners/elektro_producten_partners.png";
 import glas from "../assets/images/partners/glas_in_lood_boot_partners.png";
@@ -33,7 +32,6 @@ export default {
   data: () => ({
     images: {
         north53,
-        awaken,
         azart,
         elektro,
         glas,
@@ -48,10 +46,6 @@ export default {
       {
         icon: north53,
         alt: "53 Nord"
-      },
-      {
-        icon: awaken,
-        alt: "Aweken & More"
       },
       {
         icon: azart,

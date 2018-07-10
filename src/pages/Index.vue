@@ -10,7 +10,7 @@
       <h1>Adventures of the Valparaíso</h1>
       <valpo-two-col-section>
         <p>
-          We are a ship-based community passionate about expanding our on-board culture of sustainability and creativity. Since 2013, our foundation has involved over 500 international volunteers in our cana based in Amsterdam, our hub for new ideas around community and creative concepts.
+          We are a ship-based community passionate about expanding our on-board culture of sustainability and creativity. Since 2013, our foundation has involved over 500 international volunteers in our canal boat based in Amsterdam, our hub for new ideas around community and creative concepts.
           The success of this endeavour has strengthened our belief in a people-centric marketplace and grown our passion for a greater adventure.
         </p>
         <p>
@@ -143,12 +143,12 @@ export default {
       },
       {
         icon: iconConnect,
-        alt: "Be one of our Partners",
+        alt: "Become our Partners",
         link: "Partnership"
       },
       {
         icon: iconGlobe,
-        alt: "Experience the Pirate Community",
+        alt: "Experience the Community",
         link: "Activities"
       }
     ],

@@ -107,7 +107,7 @@ let routes = [
     meta:{
       title: "Get in Contact"
     },
-    beforeEnter() { location.href = 'https://www.instagram.com' }
+    beforeEnter() { location.href = 'https://www.instagram.com/adventuresofthevalparaiso/' }
   },
   {
     path: "/static/New-Pirate-Economy-manifesto.pdf",

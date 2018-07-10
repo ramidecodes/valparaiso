@@ -18,7 +18,7 @@ import ValpoListItem from "@/components/ValpoListItem";
 
 // Images
 import facebook from "../assets/images/icons/fb_blck.svg";
-import twitter from "../assets/images/icons/twitter.svg";
+// import twitter from "../assets/images/icons/twitter.svg";
 // import youtube from "../assets/images/icons/youtube.svg";
 import instagram from "../assets/images/icons/instagram.svg";
 import email from "../assets/images/icons/mail.svg";
@@ -35,10 +35,10 @@ export default {
         icon: facebook,
         alt: "Facebook"
       },
-      {
-        icon: twitter,
-        alt: "Twitter"
-      },
+      // {
+      //   icon: twitter,
+      //   alt: "Twitter"
+      // },
       // {
       //   icon: youtube,
       //   alt: "Youtube"
@@ -46,11 +46,12 @@ export default {
       {
         icon: instagram,
         alt: "Instagram"
-      },
-      {
-        icon: email,
-        alt: "Contact"
       }
+      // ,
+      // {
+      //   icon: email,
+      //   alt: "Contact"
+      // }
     ]
   })
 }

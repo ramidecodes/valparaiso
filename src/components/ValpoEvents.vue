@@ -1,7 +1,7 @@
 <template>
   <ul class="events-list">
     <li class="event"><valpo-fb-events/></li>
-    <li class="event" v-for="(event, index) in events" :key="index" v-link="{ url: event.url, target: '_blank' }">
+    <!-- <li class="event" v-for="(event, index) in events" :key="index" v-link="{ url: event.url, target: '_blank' }">
       <h4 class="event-title">
         {{ event.title }}
           <span class="event-date">
@@ -19,21 +19,24 @@
           </p>
         </figcaption>
       </figure>
-    </li>
+    </li> -->
   </ul>
 </template>
 
 <script>
-import ValpoButton from "@/components/ValpoButton";
+// import ValpoButton from "@/components/ValpoButton";
 import ValpoFbEvents from "@/components/ValpoFbEvents";
 
-import event01 from "../assets/images/image-event01.jpg";
-import event02 from "../assets/images/image-event02.jpg";
-import event03 from "../assets/images/image-event03.jpg";
+// import event01 from "../assets/images/image-event01.jpg";
+// import event02 from "../assets/images/image-event02.jpg";
+// import event03 from "../assets/images/image-event03.jpg";
 
 export default {
   name: "Events",
-  components: { ValpoButton, ValpoFbEvents },
+  components: {
+    // ValpoButton,
+    ValpoFbEvents
+  },
   data: () => ({
     events: [
       {
