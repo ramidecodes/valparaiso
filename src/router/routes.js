@@ -118,8 +118,8 @@ let routes = [
     }
   },
   {
-    path: "/Adventures_footermail.jpg",
-    alias: ["/Emailfooter"],
+    path: "/static/Adventures_footermail.jpg",
+    alias: ["/Adventures_footermail.jpg"],
     name: "Emailfooter",
     meta:{
       title: "Adventures of the Valparaiso"
