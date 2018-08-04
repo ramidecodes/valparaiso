@@ -118,6 +118,14 @@ let routes = [
     }
   },
   {
+    path: "/static/Adventures_footermail.jpg",
+    alias: ["/Emailfooter"],
+    name: "Emailfooter",
+    meta:{
+      title: "Adventures of the Valparaiso"
+    }
+  },
+  {
     path: "*",
     name: "Error404",
     component: Error404,
