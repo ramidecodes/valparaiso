@@ -1,5 +1,5 @@
 <template>
-  <main role="main" id="contact" v-lazy:background-image="images.beach">
+  <main role="main" id="contact" :style="`backgroundImage: url(${images.beach})`">
     <valpo-content id="form" class="form">
       <h1>Send us a message in a bottle!</h1>
       <section class="message">
@@ -8,8 +8,8 @@
           We're always on the lookout for new visions and ideas!
           <br><br>
         </p>
-        <p>Sends us an email to crew@adventuresofthevalparaiso.com</p>
-        <!-- <ValpoContactForm/> -->
+        <!-- <p>Sends us an email to crew@adventuresofthevalparaiso.com</p> -->
+        <ValpoContactForm/>
       </section>
     </valpo-content>
   </main>

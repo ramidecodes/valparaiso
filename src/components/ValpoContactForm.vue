@@ -17,9 +17,12 @@
       </select>
     </div>
     <div class="field textarea">
-        <textarea name="contactMessage" v-model="contactMessage" rows="8" cols="80" placeholder="Your message..."></textarea>
+        <textarea name="contactMessage" v-model="contactMessage" rows="8" cols="80" placeholder="Your message..." required></textarea>
     </div>
-    <button type="submit" class="button magenta" disabled>Send Message</button>
+    <div class="confirmation">
+      <label class="label">Are you Human? What's 3 * 3?</label><input type="number" v-model="contactHumanCheck" name="humanCheck" value="" required>
+      <button type="submit" class="button magenta">Send Message</button>
+    </div>
     <!-- <valpo-recaptcha/> -->
   </form>
 </template>
@@ -37,16 +40,35 @@ export default {
     contactEmail: '',
     contactSubject: '',
     contactMessage: '',
-    contactIsHuman: false
+    contactHumanCheck: ''
   }),
   props: {
   },
+  computed: {
+    contactIsHuman: function() { return parseInt(this.contactHumanCheck, 10) === 9 },
+    emailDestination: function() {
+      switch (this.contactSubject) {
+        case 'Volunteer Opportunities':
+          return 'crew@adventuresofthevalparaiso.com';
+          break;
+        case 'Partnership Opportunities':
+          return 'ulysses@adventuresofthevalparaiso.com';
+          break;
+        default:
+          return 'marketing@adventuresofthevalparaiso.com'
+
+      }
+    }
+  },
   methods: {
     processForm: function() {
-      console.log({ name: this.contactName,
-                    email: this.contactEmail,
-                    subject: this.contactSubject }
-      );
+      if (this.contactIsHuman) {
+        console.log({ name: this.contactName,
+          email: this.contactEmail,
+          subject: this.contactSubject,
+          destination: this.emailDestination}
+        );
+      }
     }
   }
 };
@@ -80,6 +102,19 @@ export default {
     }
     select.contactSubject.field {
       width: 100%;
+    }
+  }
+  .confirmation{
+    label {
+      color: #555;
+      font-size: 22px,
+    }
+    input {
+      width: 25%;
+      border: 1px solid white;
+      margin: 0 5px 0 10px;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.33);
     }
   }
   button {

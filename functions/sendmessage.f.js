@@ -32,13 +32,14 @@ function sendEmail(user) {
         // TODO: Update mailOptions
         // 5. Send email to...
         const mailOptions = {
-                from: '"Dave" <dave@example.net>',
+                from: '"Adventures of the Valparaiso" <info@adventuresofthevalparaiso.com>',
                 to: '${user.email}',
-                subject: 'Welcome!',
+                subject: 'Contact Form',
                 html: `<YOUR-WELCOME-MESSAGE-HERE>`
         }
         // 6. Process the sending of this email via nodemailer
         return mailTransport.sendMail(mailOptions)
+                // TODO: Update UI when message sent
                 .then(() => console.log('Message sent!'))
                 .catch((error) => console.error('There was an error while sending the message:', error))
 }
