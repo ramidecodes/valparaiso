@@ -21,7 +21,7 @@
     </div>
     <div class="confirmation">
       <label class="label">Are you Human? What's 3 * 3?</label><input type="number" v-model="contactHumanCheck" name="humanCheck" value="" required>
-      <button type="submit" class="button magenta">Send Message</button>
+      <button type="submit" :class="{disabled: !contactIsHuman}" class="button magenta">Send Message</button>
     </div>
     <!-- <valpo-recaptcha/> -->
   </form>
@@ -115,6 +115,9 @@ export default {
       margin: 0 5px 0 10px;
       padding: 10px;
       background: rgba(255, 255, 255, 0.33);
+    }
+    button.disabled {
+      background: gray
     }
   }
   button {
