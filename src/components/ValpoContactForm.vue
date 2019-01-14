@@ -31,6 +31,20 @@
 
 import ValpoButton from "@/components/ValpoButton";
 import ValpoRecaptcha from "@/components/ValpoRecaptcha";
+import firebase from "firebase"
+
+firebase.initializeApp({
+    apiKey: "AIzaSyAxobPYZVHkG1TfpkENA1KoZLtm9m_uews",
+    authDomain: "valparaiso-b2287.firebaseapp.com",
+    databaseURL: "https://valparaiso-b2287.firebaseio.com",
+    projectId: "valparaiso-b2287",
+    storageBucket: "valparaiso-b2287.appspot.com",
+    messagingSenderId: "630564716917"
+  });
+
+
+const addMessage = firebase.functions().httpsCallable('sendMessage');
+
 
 export default {
   name: "contactForm",
@@ -56,22 +70,29 @@ export default {
           break;
         default:
           return 'marketing@adventuresofthevalparaiso.com'
-
       }
     }
   },
   methods: {
     processForm: function() {
       if (this.contactIsHuman) {
-        console.log({ name: this.contactName,
+        const messageData = {
+          name: this.contactName,
           email: this.contactEmail,
           subject: this.contactSubject,
-          destination: this.emailDestination}
-        );
+          destination: this.emailDestination,
+          message: this.contactMessage
+        };
+        addMessage(messageData).then(function(result) {
+          // Check if message was sent successfully and show confirmatino message
+          console.log(result)
+        });
       }
     }
   }
 };
+
+
 </script>
 
 <style lang="scss" scoped>

@@ -1,45 +1,42 @@
-// 1. Deploys as dbUsersOnUpdate
-const functions = require('firebase-functions')
-const nodemailer = require('nodemailer')
-const postmarkTransport = require('nodemailer-postmark-transport')
-const admin = require('firebase-admin')
+'use strict';
+const functions = require('firebase-functions');
+const nodemailer = require('nodemailer');
 
-// 2. Admin SDK can only be initialized once
-try {admin.initializeApp(functions.config().firebase)} catch(e) {
-        console.log('InitializeApp failure')
-}
+// Configure the email transport using the default SMTP transport and a GMail account.
+// For Gmail, enable these:
+// 1. https://www.google.com/settings/security/lesssecureapps
+// 2. https://accounts.google.com/DisplayUnlockCaptcha
 
-// TODO: Update with captcha instead of auth
-// 3. Google Cloud environment variable used:
-// firebase functions:conpfig:set postmark.key="API-KEY-HERE"
-const postmarkKey = functions.config().postmark.key
-const mailTransport = nodemailer.createTransport(postmarkTransport({
-        auth: {
-                apiKey: postmarkKey
-        }
-}))
+// TODO: Configure the `gmail.email` and `gmail.password` Google Cloud environment variables.
+const gmailEmail = functions.config().gmail.email;
+const gmailPassword = functions.config().gmail.password;
+const mailTransport = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: gmailEmail,
+    pass: gmailPassword,
+  },
+});
 
-//TODO Udpate trigger to be used from contact-form submit event
-// 4. Watch for new users
-exports = module.exports = functions.database.ref('/users/{uid}').onCreate((event) => {
-        const snapshot = event.data
-        const user = snapshot.val()
-        // Use nodemailer to send email
-        return sendEmail(user);
-})
-
-function sendEmail(user) {
-        // TODO: Update mailOptions
-        // 5. Send email to...
+function sendEmail(emailData) {
+        // Compose Email
         const mailOptions = {
                 from: '"Adventures of the Valparaiso" <info@adventuresofthevalparaiso.com>',
-                to: '${user.email}',
-                subject: 'Contact Form',
-                html: `<YOUR-WELCOME-MESSAGE-HERE>`
+                to: emailData.destination,
+                subject: 'Contact from Valparaiso website',
+                html: `<p><b>Name: </b>${emailData.name}</p>
+                      <p><b>Email: </b>${emailData.email}</p>
+                      <p><b>Subject: </b>${emailData.subject}</p>
+                      <p><b>Message: </b>${emailData.message}</p>`
         }
-        // 6. Process the sending of this email via nodemailer
+        // Process the sending of this email via nodemailer
         return mailTransport.sendMail(mailOptions)
                 // TODO: Update UI when message sent
                 .then(() => console.log('Message sent!'))
                 .catch((error) => console.error('There was an error while sending the message:', error))
 }
+
+exports.sendMessage = functions.https.onCall((data, context) => {
+  // ...
+  return sendEmail(data)
+});

@@ -43,7 +43,6 @@ export default {
         .then(snapshot => {
           snapshot.forEach(entry => {
             const value = entry.val();
-
             localStorage.setItem("valparaiso", JSON.stringify(value));
             localStorage.setItem("last_updated", new Date().getTime());
             this.cached = true;
