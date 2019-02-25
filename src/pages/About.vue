@@ -120,14 +120,9 @@ export default {
         title: "Partner Contacts",
       },
       {
-        image: yoram,
-        name: "Yoram ",
-        title: "Sailor",
-      },
-      {
         image: ramiro,
         name: "Ramiro Ramirez",
-        title: "Web Developer",
+        title: "Software Developer",
       }
     ]
   })
