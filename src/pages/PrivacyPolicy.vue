@@ -1,61 +1,46 @@
 <template>
-  <main role="main" id="contact" :style="`backgroundImage: url(${images.beach})`">
-    <valpo-content id="form" class="form">
-      <h1>Send us a message in a bottle!</h1>
-      <section class="message">
+  <main role="main" id="privacy-policy">
+    <valpo-content class="content">
+      <h1>Privacy Policy</h1>
+      <section class="">
         <p>
-          Want to get in touch, have a question or just want to say hi?<br>
-          We're always on the lookout for new visions and ideas!
+          This is our privacy policy
           <br><br>
         </p>
-        <p>Sends us an email to crew@adventuresofthevalparaiso.com</p>
-        <!-- <ValpoContactForm/> -->
       </section>
     </valpo-content>
   </main>
 </template>
 
 <script>
-import ValpoSplash from "@/components/ValpoSplash";
 import ValpoContent from "@/components/ValpoContent";
-import ValpoContactForm from "@/components/ValpoContactForm";
-
-
-import beach from "../assets/images/image-beach.jpg";
 
 export default {
-  name: "Contact",
+  name: "PrivacyPolicy",
   components: {
-    ValpoContent,
-    ValpoContactForm
+    ValpoContent
   },
   data: () => ({
-    images: { beach }
   })
 };
 </script>
 
 <style lang="scss" scoped>
 
-#contact {
-  h1 {
-    text-shadow: 0 0 6px #888;
-  }
-  background-size: cover;
-  padding-top: calc(var(--tracking-large) * 5);
-  .message {
-    width: 60%;
-    align-self:flex-start;
-    padding-top: 1em;
-    @media (max-width: 1280px) {
-      width: 70%;
+#privacy-policy {
+  .content {
+    h1 {
+      text-align: center;
     }
-    @media (max-width: 1100px) {
+    section {
       width: 100%;
     }
-    p {
-    font-size: 22px;
-    }
+    text-align: left;
+    background: linear-gradient(
+      to bottom,
+      var(--color-ocean) 0%,
+      var(--color-cerulean) 100%
+    );
   }
 }
 </style>
