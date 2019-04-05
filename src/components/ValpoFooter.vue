@@ -7,12 +7,19 @@
     <p class="align-center">
       <br>
       <img v-lazy="images.logo" class="logo" alt="Adventures of the Valparaiso" />
+      <br>
+      <br>
+      Site by <router-link :to="{ name: 'About', params: { focus: 'crew' }}" title="Art &amp; Design">Alexis Camejo</router-link>, <router-link :to="{ name: 'About', params: { focus: 'crew' }}" title="Development">Timo Heddes &amp; Ramiro Ramirez</router-link>
     </p>
     <p class="align-center">
-      Stichting Adventures of the Valparaiso.<br>
+      Stichting Adventures of the Valparaiso<br>
       NL32TRIO0338494154
-      <br>&copy; 2014-{{thisYear}} All rights (and lefts) reserved.<br><br>
-      Site by <router-link :to="{ name: 'About', params: { focus: 'crew' }}" title="Art &amp; Design">Alexis Camejo</router-link> &amp; <router-link :to="{ name: 'About', params: { focus: 'crew' }}" title="Development">Timo Heddes & Ecovirtual</router-link>
+      <br>
+      <br>
+      <router-link :to="{ name: 'PrivacyPolicy', params: {} }">Privacy Policy</router-link>
+      <br>
+      <br>
+      &copy; 2014-{{thisYear}} All rights (and lefts) reserved
     </p>
   </footer>
 </template>

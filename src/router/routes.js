@@ -1,15 +1,15 @@
-import config from "@/config";
-
-import Index from "@/pages/Index";
-import Volunteer from "@/pages/Volunteer";
-import About from "@/pages/About";
-import Npe from "@/pages/Npe";
-// import Activities from "@/pages/Activities";
-import Partnership from "@/pages/Partnership";
-import Contact from "@/pages/Contact";
-import Error404 from "@/pages/Error404";
-import Construction from "@/pages/Construction";
-import Events from "@/pages/Events";
+import config from "@/config"
+import Index from "@/pages/Index"
+import Volunteer from "@/pages/Volunteer"
+import About from "@/pages/About"
+import Npe from "@/pages/Npe"
+// import Activities from "@/pages/Activities"
+import Partnership from "@/pages/Partnership"
+import Contact from "@/pages/Contact"
+import Error404 from "@/pages/Error404"
+import Construction from "@/pages/Construction"
+import Events from "@/pages/Events"
+import PrivacyPolicy from "@/pages/PrivacyPolicy"
 
 let routes = [
   {
@@ -34,7 +34,7 @@ let routes = [
     alias: ["/about", "/history", "/history-of-the-valparaiso"],
     name: "About",
     component: About,
-    meta:{
+    meta: {
       title: "About Us - History of the Valparaiso"
     }
   },
@@ -43,16 +43,16 @@ let routes = [
     alias: ["/new-pirate-economy"],
     name: "Npe",
     component: Npe,
-    meta:{
+    meta: {
       title: "The New Pirate Economy"
     }
   },
   {
     path: "/events",
-    alias: ["/festivals","/whats-on", "/activities"],
+    alias: ["/festivals", "/whats-on", "/activities"],
     name: "Events",
     component: Events,
-    meta:{
+    meta: {
       title: "Events & Festivals"
     }
   },
@@ -61,7 +61,7 @@ let routes = [
     alias: ["/investors"],
     name: "Partnership",
     component: Partnership,
-    meta:{
+    meta: {
       title: "Partnership & Investors"
     }
   },
@@ -70,7 +70,15 @@ let routes = [
     alias: ["/contactu-us", "/email"],
     name: "Contact",
     component: Contact,
-    meta:{
+    meta: {
+      title: "Get in Contact"
+    }
+  },
+  {
+    path: "/privacy-policy",
+    name: "PrivacyPolicy",
+    component: PrivacyPolicy,
+    meta: {
       title: "Get in Contact"
     }
   },
@@ -78,43 +86,52 @@ let routes = [
     path: "/facebook",
     name: "Facebook",
     component: Contact,
-    meta:{
+    meta: {
       title: "Get in Contact"
     },
-    beforeEnter() { location.href = 'https://www.facebook.com/adventuresofthevalparaiso/' }
+    beforeEnter() {
+      location.href = "https://www.facebook.com/adventuresofthevalparaiso/";
+    }
   },
   {
     path: "/twitter",
     name: "Twitter",
     component: Contact,
-    meta:{
+    meta: {
       title: "Get in Contact"
     },
-    beforeEnter() { location.href = 'https://www.twitter.com/' }
+    beforeEnter() {
+      location.href = "https://www.twitter.com/";
+    }
   },
   {
     path: "/youtube",
     name: "Youtube",
     component: Contact,
-    meta:{
+    meta: {
       title: "Get in Contact"
     },
-    beforeEnter() { location.href = 'https://www.youtube.com/channel/UC1XzBAvMDmw21mgIdFbMbfw' }
+    beforeEnter() {
+      location.href =
+        "https://www.youtube.com/channel/UC1XzBAvMDmw21mgIdFbMbfw";
+    }
   },
   {
     path: "/instagram",
     name: "Instagram",
     component: Contact,
-    meta:{
+    meta: {
       title: "Get in Contact"
     },
-    beforeEnter() { location.href = 'https://www.instagram.com/adventuresofthevalparaiso/' }
+    beforeEnter() {
+      location.href = "https://www.instagram.com/adventuresofthevalparaiso/";
+    }
   },
   {
     path: "/static/New-Pirate-Economy-manifesto.pdf",
     alias: ["/manifesto"],
     name: "Manifesto",
-    meta:{
+    meta: {
       title: "The New Pirate Economy Manifesto"
     }
   },
@@ -122,7 +139,7 @@ let routes = [
     path: "/static/Adventures_footermail.jpg",
     alias: ["/Adventures_footermail.jpg"],
     name: "Emailfooter",
-    meta:{
+    meta: {
       title: "Adventures of the Valparaiso"
     }
   },

@@ -111,7 +111,7 @@ export default {
       {
         day: "X of Sep",
         year: "2021",
-        title: "First Journy with the New Boat",
+        title: "First Journey with the New Boat",
         description: "The sails will be unfurled and the course set! Exact date unknown.",
         image: newboat
       }
