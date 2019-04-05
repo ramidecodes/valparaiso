@@ -4,11 +4,12 @@ import Index from "@/pages/Index";
 import Volunteer from "@/pages/Volunteer";
 import About from "@/pages/About";
 import Npe from "@/pages/Npe";
-import Activities from "@/pages/Activities";
+// import Activities from "@/pages/Activities";
 import Partnership from "@/pages/Partnership";
 import Contact from "@/pages/Contact";
 import Error404 from "@/pages/Error404";
 import Construction from "@/pages/Construction";
+import Events from "@/pages/Events";
 
 let routes = [
   {
@@ -47,10 +48,10 @@ let routes = [
     }
   },
   {
-    path: "/activities",
-    alias: ["/festivals","/whats-on", "/events"],
-    name: "Activities",
-    component: Activities,
+    path: "/events",
+    alias: ["/festivals","/whats-on", "/activities"],
+    name: "Events",
+    component: Events,
     meta:{
       title: "Events & Festivals"
     }
