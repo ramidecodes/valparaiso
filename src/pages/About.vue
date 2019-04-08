@@ -65,8 +65,6 @@ import iconEconomy from "../assets/images/icons/pirate_economy.svg";
 
 // Crew
 import ulysses from "../assets/images/crew/valparaiso-crew-ulysses.jpg";
-import margo from "../assets/images/crew/valparaiso-crew-margo.jpg";
-import alexis from "../assets/images/crew/valaparaiso-crew_alexis.jpg";
 import david from "../assets/images/crew/valparaiso-crew-dave.jpg";
 import ramiro from "../assets/images/crew/Ramiro_Ramirez_crew.jpg";
 import lyvia from "../assets/images/crew/valparaiso-crew-lyvia.jpg";
@@ -93,16 +91,6 @@ export default {
         image: ulysses,
         name: "Ulysses Schuitemaker",
         title: "Captain & Founder",
-      },
-      {
-        image: margo,
-        name: "Margo Muttart",
-        title: "Event Organization",
-      },
-      {
-        image: alexis,
-        name: "Alexis Camejo",
-        title: "Designer",
       },
       {
         image: david,
