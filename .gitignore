@@ -6,6 +6,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Firebase Deployment
+.firebase/
+
 # Editor directories and files
 .idea
 *.suo
