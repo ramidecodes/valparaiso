@@ -2,11 +2,11 @@
   <main role="main" id="events">
 
     <valpo-youtube-splash class="splash" :image="images.giuliana" :video="video">
-      <h1>Become a events</h1>
+      <h1>Events</h1>
     </valpo-youtube-splash>
 
     <valpo-content class="events-content flex-rows align-center">
-      <h2>Who are we?</h2>
+      <h3>Who are we?</h3>
       <valpo-two-col-section>
         <p>
           The Valparaiso pirates are a ship-based community of artists and travellers who are passionate about sustainability and believe in a people-centric marketplace.
@@ -18,7 +18,7 @@
           As pirates of the Valparaíso, we believe that everyone has something to share: culture, experiences, skills and knowledge. We don’t raid, loot or wreck, but collaborate to create change.
         </p>
       </valpo-two-col-section>
-      <h4>What do we do?</h4>
+      <h3>What do we do?</h3>
       <valpo-two-col-section>
         <p>
           Our foundation is about creating innovative and sustainable solutions to challenge mainstream consumer culture, while providing a bold, alternative way of thinking about trade and economics.
@@ -30,9 +30,28 @@
           Stories and experiences are what make each of us who we are, and sharing them is what brings us together in this journey of combined human consciousness.
         </p>
       </valpo-two-col-section>
-      <h4>
-        For us visitors are participants.
-      </h4>
+
+      <hr>
+
+      <valpo-content class="spaces">
+        <h3>Spaces we offer</h3>
+        <valpo-two-col-section>
+          <img v-lazy="spaces.valparaiso.image" :alt="spaces.valparaiso.title">
+          <div>
+            <h4>{{ spaces.valparaiso.title }}</h4></br>
+            <p>{{ spaces.valparaiso.description }}</p>
+          </div>
+        </valpo-two-col-section>
+
+        <valpo-two-col-section>
+          <img v-lazy="spaces.tipi.image" :alt="spaces.tipi.title">
+          <div>
+            <h4>{{ spaces.tipi.title }}</h4></br>
+            <p>{{ spaces.tipi.description }}</p>
+          </div>
+        </valpo-two-col-section>
+      </valpo-content>
+
       <hr>
       <h3 id="projects" class="projects">
         Previous Festivals
@@ -169,7 +188,20 @@ export default {
         title: "Brest Maritime",
         description: ""
       }
-    ]
+    ],
+    spaces: {
+      valparaiso:
+      {
+        image: light,
+        title: "Valparaiso Ship",
+        description: "Deck and doors are thrown open. Visitors are welcomed in and invited to create their own place in the history of this 100-year old boat. We are a floating world of magic, a Fata Morgana on the water. The top deck is a lounge draped with blankets and pillows, and the ships also hosts a DJ booth and small stage. This wildly-popular venue can be reached by small boat or by swimming. It is usually moored in Amsterdam, as the hub of our creative community, but with a crane it can be put on long-distance transport."
+      },
+      tipi: {
+        image: qr,
+        title: "Tipi Tent",
+        description: "The tipi is an inspiring place to relax. This eight metre space can host up to forty-five people, and includes a DJ deck and small stage. It is home to a beautiful mobile of origami cranes, is lit by UV lights, and is perfect for both relaxing and partying. But the experience we create is about more than the lights and Persian carpets. We invite people to step inside and become part of this world of imagination we build together."
+      }
+    }
   })
 };
 </script>
@@ -258,6 +290,30 @@ hr{
     }
   }
 }
+.spaces {
+  section {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 90px;
+    @media (max-width: 1342px) {
+      flex-flow: column nowrap;
+      align-items: center;
+      img {
+        margin-bottom: 40px;
+      }
+    }
+    img {
+      border-radius: 50%;
+      width: 280px;
+      height: auto;
+    }
+    div {
+      max-width: 70%;
+      p { text-align: left;}
+    }
+  }
+}
+
 .form {
   background-color: rgba(0, 175, 187, 1);
   background-repeat: no-repeat;
