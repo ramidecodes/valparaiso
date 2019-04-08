@@ -1,46 +1,48 @@
 <template>
-  <main role="main" id="events">
+  <main role="main" id="services">
 
     <valpo-youtube-splash class="splash" :image="images.giuliana" :video="video">
       <h1>Events</h1>
     </valpo-youtube-splash>
 
-    <valpo-content class="events-content flex-rows align-center">
-      <h3>Who are we?</h3>
-      <valpo-two-col-section>
-        <p>
-          The Valparaiso pirates are a ship-based community of artists and travellers who are passionate about sustainability and believe in a people-centric marketplace.
-        </p>
-        <p>
-          We make installations and concepts that bring this vision to festivals. The tipi and the ship are unique venues that we offer as part of an experience where people can be submerged in a different world and no longer feel like visitors, but part of our community.
-        </p>
-        <p>
-          As pirates of the Valparaíso, we believe that everyone has something to share: culture, experiences, skills and knowledge. We don’t raid, loot or wreck, but collaborate to create change.
-        </p>
-      </valpo-two-col-section>
-      <h3>What do we do?</h3>
-      <valpo-two-col-section>
-        <p>
-          Our foundation is about creating innovative and sustainable solutions to challenge mainstream consumer culture, while providing a bold, alternative way of thinking about trade and economics.
-        </p>
-        <p>
-          To us, this is the real essence of piracy; the courage to branch out from established societal norms to explore and create progressive and exciting pathways.
-        </p>
-        <p>
-          Stories and experiences are what make each of us who we are, and sharing them is what brings us together in this journey of combined human consciousness.
-        </p>
-      </valpo-two-col-section>
+    <valpo-content class="services-content flex-rows align-center">
+      <section class="who-we-are">
+        <div>
+          <h3>Who are we?</h3>
+          <p>
+            The Valparaiso pirates are a ship-based community of artists and travellers who are passionate about sustainability and believe in a people-centric marketplace.
+          </p>
+          <p>
+            We make installations and concepts that bring this vision to festivals. The tipi and the ship are unique venues that we offer as part of an experience where people can be submerged in a different world and no longer feel like visitors, but part of our community.
+          </p>
+          <p>
+            As pirates of the Valparaíso, we believe that everyone has something to share: culture, experiences, skills and knowledge. We don’t raid, loot or wreck, but collaborate to create change.
+          </p>
+        </div>
+        <div>
+          <h3>What do we do?</h3>
+          <p>
+            Our foundation is about creating innovative and sustainable solutions to challenge mainstream consumer culture, while providing a bold, alternative way of thinking about trade and economics.
+          </p>
+          <p>
+            To us, this is the real essence of piracy; the courage to branch out from established societal norms to explore and create progressive and exciting pathways.
+          </p>
+          <p>
+            Stories and experiences are what make each of us who we are, and sharing them is what brings us together in this journey of combined human consciousness.
+          </p>
+        </div>
+      </section>
 
       <hr>
 
       <valpo-content class="spaces">
         <h3>Spaces we offer</h3>
         <valpo-two-col-section v-for="(space) in spaces" :key="space.title">
-          <img v-lazy="space.image" :alt="space.title">
           <div>
             <h4>{{ space.title }}</h4></br>
             <p>{{ space.description }}</p>
           </div>
+          <img v-lazy="space.image" :alt="space.title">
         </valpo-two-col-section>
       </valpo-content>
 
@@ -55,7 +57,6 @@
             <figcaption>
               {{ project.title }}</br>
               <span class="project-description">{{ project.description }}</span>
-
             </figcaption>
           </figure>
         </valpo-list-item>
@@ -78,7 +79,7 @@
           <!-- <router-link :to="{ name: 'Manifesto', params: {} }">
           </router-link> -->
           <a href="/static/valparaiso_community_festival_brochure_2018.pdf" target="_blank">
-            <valpo-button class="button terracota large" label="Download our brochure"></valpo-button>
+            <valpo-button class="button terracota large" label="Find out more"></valpo-button>
           </a>
         </p>
       </section>
@@ -169,12 +170,12 @@ export default {
     projects: [
       {
         image: light,
-        title: "Gardens of babylon",
+        title: "Gardens of Babylon",
         description: ""
       },
       {
         image: qr,
-        title: "Vrijland festival",
+        title: "Vrijland",
         description: ""
       },
       {
@@ -196,7 +197,7 @@ export default {
     spaces: [
       {
         image: light,
-        title: "Valparaiso Ship",
+        title: "The Valparaiso",
         description: "Deck and doors are thrown open. Visitors are welcomed in and invited to create their own place in the history of this 100-year old boat. We are a floating world of magic, a Fata Morgana on the water. The top deck is a lounge draped with blankets and pillows, and the ships also hosts a DJ booth and small stage. This wildly-popular venue can be reached by small boat or by swimming. It is usually moored in Amsterdam, as the hub of our creative community, but with a crane it can be put on long-distance transport."
       },
       {
@@ -215,7 +216,7 @@ export default {
       },
       {
         image: qr,
-        title: "Origami Crane Installationt",
+        title: "Origami Crane Installation",
         description: "Visitors to Suzanne’s art studio are often asked to paint a piece of paper, which she then transforms into origami cranes. Over the years this had grown into a substantial flock of unique, hand-painted birds that radiate with the various souls that have contributed to it. This year, we are asking visitors to join in, painting their own pieces of paper to become part of this art installation and centrepiece that represents the beautiful things we can achieve through connection and community.",
         collaborator: "Suzanne Dirne",
         link: "http://overratedenzo.nl/"
@@ -257,7 +258,7 @@ hr{
   margin: 15px 0;
   border: 1px solid var(--color-cerulean);
 }
-.events-content {
+.services-content {
   background: linear-gradient(
     to bottom,
     var(--color-ocean) 0%,
@@ -327,6 +328,20 @@ hr{
           }
         }
       }
+    }
+  }
+}
+.who-we-are {
+  columns: 2 auto;
+  column-gap: 2rem;
+  div {
+    display: flex;
+    flex-flow: column nowrap;
+    h3 {
+      text-align: center;
+    }
+    p {
+      text-align: left;
     }
   }
 }

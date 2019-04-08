@@ -8,7 +8,7 @@ import Partnership from "@/pages/Partnership"
 import Contact from "@/pages/Contact"
 import Error404 from "@/pages/Error404"
 import Construction from "@/pages/Construction"
-import Events from "@/pages/Events"
+import Services from "@/pages/Services"
 import PrivacyPolicy from "@/pages/PrivacyPolicy"
 
 let routes = [
@@ -26,7 +26,7 @@ let routes = [
     name: "Volunteer",
     component: Volunteer,
     meta: {
-      title: "Become a volunteer"
+      title: "Become a Volunteer"
     }
   },
   {
@@ -48,12 +48,12 @@ let routes = [
     }
   },
   {
-    path: "/events",
-    alias: ["/festivals", "/whats-on", "/activities"],
-    name: "Events",
-    component: Events,
+    path: "/services",
+    alias: ["/hire-our-services"],
+    name: "Services",
+    component: Services,
     meta: {
-      title: "Events & Festivals"
+      title: "Hire our Services"
     }
   },
   {
