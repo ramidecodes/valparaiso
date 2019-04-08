@@ -109,7 +109,7 @@ export default {
         image: trade
       },
       {
-        day: "X of Sep",
+        day: "Sep",
         year: "2021",
         title: "First Journey with the New Boat",
         description: "The sails will be unfurled and the course set! Exact date unknown.",

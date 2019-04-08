@@ -11,7 +11,7 @@
       </section> -->
       <ul>
         <li v-on:click="menuIsActive = !menuIsActive"><router-link :to="{ name: 'Index'}">Home</router-link></li>
-        <li v-on:click="menuIsActive = !menuIsActive"><router-link :to="{ name: 'About'}">The History</router-link></li>
+        <li v-on:click="menuIsActive = !menuIsActive"><router-link :to="{ name: 'About'}">About Us</router-link></li>
         <li v-on:click="menuIsActive = !menuIsActive"><router-link :to="{ name: 'Npe'}">New Pirate Economy</router-link></li>
         <li v-on:click="menuIsActive = !menuIsActive"><router-link :to="{ name: 'Volunteer'}">Volunteer</router-link></li>
         <li v-on:click="menuIsActive = !menuIsActive"><router-link :to="{ name: 'Partnership'}">Partnership</router-link></li>

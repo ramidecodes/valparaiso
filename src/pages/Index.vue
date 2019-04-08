@@ -51,7 +51,7 @@
       <valpo-two-col-section>
         <h4>A new journey</h4>
         <p>
-          In 2019, our journey to Valparaiso will begin. We’ll set up temporary marketplaces in the U.K., France, Denmark, Spain, Portugal, Morocco, the Canary Islands, Cuba, Puerto Rico, Venezuela, Brazil, Argentina, and, of course, Chile - our final destination. We expect the journey to take a year and a half.
+          In 2021 our journey to Valparaiso will begin. We’ll set up temporary marketplaces in the U.K., France, Denmark, Spain, Portugal, Morocco, the Canary Islands, Cuba, Puerto Rico, Venezuela, Brazil, Argentina, and, of course, Chile - our final destination. We expect the journey to take a year and a half.
         </p>
         <p>
           We’ll stock the ship with goods contributed by people and partners. Through a series of sustainability workshops, we’ll show how recycling, upcycling and responsible waste management can change the world.
@@ -88,7 +88,7 @@
         Upcoming events & Festivals
       </h3>
       <p>
-        Be part of the <strong>New Pirate Economy</strong> by participating in our monthly activities.
+        Be part of the <strong>New Pirate Economy</strong> by participating in our activities.
       </p>
       <valpo-events></valpo-events>
     </valpo-content>
