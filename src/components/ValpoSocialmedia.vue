@@ -1,6 +1,6 @@
 <template>
   <section id="socialmedia" class="socialmedia">
-    <valpo-list class="icons flex-between">
+    <valpo-list class="icons flex-center">
       <valpo-list-item v-for="(item) in socialicons" :key="item.icon">
         <router-link :to="{ name: item.alt, params: {} }">
           <img v-lazy="item.icon" :alt="item.alt">
