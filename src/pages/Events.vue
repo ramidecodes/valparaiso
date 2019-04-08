@@ -35,19 +35,11 @@
 
       <valpo-content class="spaces">
         <h3>Spaces we offer</h3>
-        <valpo-two-col-section>
-          <img v-lazy="spaces.valparaiso.image" :alt="spaces.valparaiso.title">
+        <valpo-two-col-section v-for="(space) in spaces" :key="space.title">
+          <img v-lazy="space.image" :alt="space.title">
           <div>
-            <h4>{{ spaces.valparaiso.title }}</h4></br>
-            <p>{{ spaces.valparaiso.description }}</p>
-          </div>
-        </valpo-two-col-section>
-
-        <valpo-two-col-section>
-          <img v-lazy="spaces.tipi.image" :alt="spaces.tipi.title">
-          <div>
-            <h4>{{ spaces.tipi.title }}</h4></br>
-            <p>{{ spaces.tipi.description }}</p>
+            <h4>{{ space.title }}</h4></br>
+            <p>{{ space.description }}</p>
           </div>
         </valpo-two-col-section>
       </valpo-content>
@@ -68,6 +60,18 @@
           </figure>
         </valpo-list-item>
       </valpo-list>
+
+      <valpo-content class="concepts">
+        <h3>Concepts &amp; Collaborators</h3>
+        <valpo-two-col-section v-for="(concept) in concepts" :key="concept.title">
+          <img v-lazy="concept.image" :alt="concept.title">
+          <div>
+            <h4>{{ concept.title }}</h4></br>
+            <p>{{ concept.description }}</p>
+            <p v-if="concept.collaborator">Collaborator: <a :href="concept.link" target="_blank">{{concept.collaborator}}</a></p>
+          </div>
+        </valpo-two-col-section>
+      </valpo-content>
 
       <section class="brochure">
         <p>
@@ -189,19 +193,55 @@ export default {
         description: ""
       }
     ],
-    spaces: {
-      valparaiso:
+    spaces: [
       {
         image: light,
         title: "Valparaiso Ship",
         description: "Deck and doors are thrown open. Visitors are welcomed in and invited to create their own place in the history of this 100-year old boat. We are a floating world of magic, a Fata Morgana on the water. The top deck is a lounge draped with blankets and pillows, and the ships also hosts a DJ booth and small stage. This wildly-popular venue can be reached by small boat or by swimming. It is usually moored in Amsterdam, as the hub of our creative community, but with a crane it can be put on long-distance transport."
       },
-      tipi: {
+      {
         image: qr,
         title: "Tipi Tent",
         description: "The tipi is an inspiring place to relax. This eight metre space can host up to forty-five people, and includes a DJ deck and small stage. It is home to a beautiful mobile of origami cranes, is lit by UV lights, and is perfect for both relaxing and partying. But the experience we create is about more than the lights and Persian carpets. We invite people to step inside and become part of this world of imagination we build together."
       }
-    }
+    ],
+    concepts: [
+      {
+        image: light,
+        title: "Rent a Friend",
+        description: "Ever lost a friend at a festival? It happens to all of us. Now you don’t have to be alone - you can rent a friend! If you need help finding your lost friends, or your lost keys, or you just don’t want to go to a dance alone, we have lots of friends in stock that you can rent for free! They come equipped with an alarm clock, and return automatically when it goes off! Our visitors are also invited to put themselves up to rent. Festivals are amazing places to meet people, and what better way to make new friends?",
+        collaborator: "",
+        link: ""
+      },
+      {
+        image: qr,
+        title: "Origami Crane Installationt",
+        description: "Visitors to Suzanne’s art studio are often asked to paint a piece of paper, which she then transforms into origami cranes. Over the years this had grown into a substantial flock of unique, hand-painted birds that radiate with the various souls that have contributed to it. This year, we are asking visitors to join in, painting their own pieces of paper to become part of this art installation and centrepiece that represents the beautiful things we can achieve through connection and community.",
+        collaborator: "Suzanne Dirne",
+        link: "http://overratedenzo.nl/"
+      },
+      {
+        image: light,
+        title: "Glow in the Dark Dating",
+        description: "Ever tried dating in the dark? With our quizmaster deciding the rhythm of the night, all extra lights are off and all the glow in the dark makeup is on. Inspiring luminous connections in unique spaces under the romance of black lighting, it will make a great ‘how we met’ story in years to come. People will choose coloured bands to wear based on their dating preferences – purple for women, blue for men, and white for non-binary people. If they have no preferences, they can wear all three!",
+        collaborator: "",
+        link: ""
+      },
+      {
+        image: qr,
+        title: "Music by Kevin Valentine",
+        description: "Our DJ stage is a platform for emerging artists and hidden gems. We select our DJs carefully and make sure the music fits the vibe of the festival and our space. Depending on the program the DJ will play down tempo music or music that it will make it impossible for you to stand still! The intimate atmosphere makes sure this secret stage will be something all visitors will remember. Our doors are always open to new opportunities, new connections, and new experiences. Kevin also invites other unfamiliar DJs connected to the genre to play, so for this contact him on Soundcloud.",
+        collaborator: "Kevin Valentine",
+        link: "http://www.soundcloud.com/kevinvalentine"
+      },
+      {
+        image: light,
+        title: "Mobile Mermaid",
+        description: "Normal mermaids don’t do too well out of water. They just flop around and flap their fins, and you have to come to see them. But the mermaid that the pirates captured is on wheels! She is an oracle who listens to the whispers of the wind and the waves, knows the stories of the sky and the sea - and the secrets of legless modes of travel. She drives around the festival, going from stage to stage. Who better than a mythical mermaid to bring a sense of calm and normality to this crazy world?",
+        collaborator: "Veerle Nanna",
+        link: "http://www.VnannaV.nl/"
+      },
+    ]
   })
 };
 </script>
@@ -303,7 +343,30 @@ hr{
       }
     }
     img {
-      border-radius: 50%;
+      border-radius: 40px;
+      width: 280px;
+      height: auto;
+    }
+    div {
+      max-width: 70%;
+      p { text-align: left;}
+    }
+  }
+}
+.concepts {
+  section {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 90px;
+    @media (max-width: 1342px) {
+      flex-flow: column nowrap;
+      align-items: center;
+      img {
+        margin-bottom: 40px;
+      }
+    }
+    img {
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
       width: 280px;
       height: auto;
     }
