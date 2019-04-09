@@ -48,8 +48,8 @@ let routes = [
     }
   },
   {
-    path: "/services",
-    alias: ["/hire-our-services"],
+    path: "/book-us",
+    alias: ["/services"],
     name: "Services",
     component: Services,
     meta: {
