@@ -105,7 +105,7 @@ export default {
         day: "9 of Sep",
         year: "2016",
         title: "New Pirate Economy!",
-        description: "We kicked off our New Pirate Economy for the first time on the shore! Not on the water anymore but we made a trade-tent where people could trade goods against stories.Also we rented out friends that could help people that lost their friends or their keys! For free offcourse ;)",
+        description: "We kicked off our New Pirate Economy for the first time on the shore! Not on the water anymore but we made a trade-tent where people could trade goods against stories.Also we rented out friends that could help people that lost their friends or their keys! For free of course ;)",
         image: trade
       },
       {
