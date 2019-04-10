@@ -149,7 +149,7 @@ export default {
       {
         icon: iconGlobe,
         alt: "Experience the Community",
-        link: "Activities"
+        link: "Services"
       }
     ],
     pirateStuff: [
