@@ -6,13 +6,13 @@
     </div>
     <p class="align-center">
       <br>
-      <img v-lazy="images.logo" class="logo" alt="Adventures of the Valparaiso" />
+      <img v-lazy="images.logo" class="logo" alt="Adventures of the Valparaíso" />
       <br>
       <br>
       Site by <router-link :to="{ name: 'About', params: { focus: 'crew' }}" title="Art &amp; Design">Alexis Camejo</router-link>, <router-link :to="{ name: 'About', params: { focus: 'crew' }}" title="Development">Timo Heddes &amp; Ramiro Ramirez</router-link>
     </p>
     <p class="align-center">
-      Stichting Adventures of the Valparaiso<br>
+      Stichting Adventures of the Valparaíso<br>
       NL32TRIO0338494154
       <br>
       <br>

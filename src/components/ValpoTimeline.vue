@@ -49,14 +49,14 @@ export default {
         day: "23 of Jan",
         year: "2013",
         title: "Building",
-        description: "While transforming the boat into a stained glass art studio, the Captain welcomes volunteers from a global community of artists, travellers and tradesmen. The adventurous souls sharing their skills and creativity onboard quickly become an essential part of the Valparaiso story.",
+        description: "While transforming the boat into a stained glass art studio, the Captain welcomes volunteers from a global community of artists, travellers and tradesmen. The adventurous souls sharing their skills and creativity onboard quickly become an essential part of the Valparaíso story.",
         image: building
       },
       {
         day: "10 of Dec",
         year: "2013",
         title: "Moving to Amsterdam",
-        description: "It is time to broaden the Valparaiso horizons and she sets sail for Amsterdam! Here the Captain finds significantly more opportunities for creative collaborations, access to resources and an ever-widening circle of volunteers and kindred projects. An exciting new chapter begins!",
+        description: "It is time to broaden the Valparaíso horizons and she sets sail for Amsterdam! Here the Captain finds significantly more opportunities for creative collaborations, access to resources and an ever-widening circle of volunteers and kindred projects. An exciting new chapter begins!",
         image: moving
       },
       {
@@ -70,14 +70,14 @@ export default {
         day: "12 of Ago",
         year: "2015",
         title: "Festivals",
-        description: "Summer! Deck and doors are thrown open and creativity and stories are used to form inviting bridges into several waterside festival communities. These are wildly successful events and many land and boat participants join in celebrating the Valparaiso culture.",
+        description: "Summer! Deck and doors are thrown open and creativity and stories are used to form inviting bridges into several waterside festival communities. These are wildly successful events and many land and boat participants join in celebrating the Valparaíso culture.",
         image: festivals
       },
       {
         day: "6 of Nov",
         year: "2015",
         title: "Making the Plan",
-        description: "Brainstorming and discussions have been churning away for awhile and now there is definite and increasing momentum in the Valparaiso currents. With expanding skill and vision, Captain and community earnestly prepare to (officially) launch the next grand adventure!",
+        description: "Brainstorming and discussions have been churning away for awhile and now there is definite and increasing momentum in the Valparaíso currents. With expanding skill and vision, Captain and community earnestly prepare to (officially) launch the next grand adventure!",
         image: theplan
       },
       {

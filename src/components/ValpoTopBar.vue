@@ -4,7 +4,7 @@
     <section class="logo">
       <router-link :to="{ name: 'Index'}">
         <valpo-logo/>
-        <!-- <img v-lazy="images.logo" class="logo" alt="Adventures of the Valparaiso" /> -->
+        <!-- <img v-lazy="images.logo" class="logo" alt="Adventures of the Valparaíso" /> -->
       </router-link>
     </section>
     <valpo-socialmedia/>
