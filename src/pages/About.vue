@@ -90,7 +90,7 @@ export default {
       {
         image: ulysses,
         name: "Ulysses Schuitemaker",
-        title: "Captain & Founder",
+        title: "Captain - Founder - Youth Leader - European Co-ordinator",
       },
       {
         image: david,
@@ -105,7 +105,7 @@ export default {
       {
         image: lyvia,
         name: "Lyvia Lozano",
-        title: "Partner Contacts",
+        title: "South American Co-ordinator",
       },
       {
         image: ramiro,
