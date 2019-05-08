@@ -10,6 +10,7 @@ import Error404 from "@/pages/Error404"
 import Construction from "@/pages/Construction"
 import Services from "@/pages/Services"
 import PrivacyPolicy from "@/pages/PrivacyPolicy"
+import Trainings from "@/pages/Trainings"
 
 let routes = [
   {
@@ -45,6 +46,14 @@ let routes = [
     component: Npe,
     meta: {
       title: "The New Pirate Economy"
+    }
+  },
+  {
+    path: "/trainings",
+    name: "Trainings",
+    component: Trainings,
+    meta: {
+      title: "Trainings"
     }
   },
   {

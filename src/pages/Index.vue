@@ -10,11 +10,15 @@
       <h1>Adventures of the Valparaíso</h1>
       <valpo-two-col-section>
         <p>
-          We are a ship-based community passionate about expanding our on-board culture of sustainability and creativity. Since 2013, our foundation has involved over 500 international volunteers in our canal boat based in Amsterdam, our hub for new ideas around community and creative concepts.
-          The success of this endeavour has strengthened our belief in a people-centric marketplace and grown our passion for a greater adventure.
+          We are a ship-based international community passionate about expanding our on-board culture of sustainability and creativity. Since 2013, our foundation has evolved from an artist hub for over 1000 international volunteers in Amsterdam to become a platform for letting the next generations evolve and learn.
         </p>
         <p>
-          We are now determined, with support from our homebase in the Netherlands, to equip a larger, seaworthy ship and crew for an international journey of art, music, connection and trade. This transformation and voyage will, in collaboration with our sponsors and volunteers, exhibit the exchange of ideas, skills, stories and goods with local communities and embody our belief that it is only with each of our individual stories that we are able to tell one, whole story together: the story of the <strong>Adventures of the Valparaiso</strong>.
+          The success of this endeavour has strengthened our belief in a people-centric marketplace and grown our passion for a greater adventure.
+          In 2018 we started to step up our program with young adults and youth workers during our Adventures of the Valparaiso youth exchanges, and worked on new ways to share goods and experiences through the development of the Pirate App.
+        </p>
+        <hr>
+        <p>
+          We are now determined, with support from our homebase in the Netherlands, to equip a larger, seaworthy ship and crew for an international journey of art, music, connection and trade. Our collaborations with sponsors, partners and volunteers are enabling all of us to exchange ideas, skills, stories and goods with local communities worldwide. It is our belief that with each of our individual stories that we are able to tell one, whole story together: the story of the <strong>Adventures of the Valparaiso</strong>.
         </p>
         <p class="cta">
           <router-link :to="{ name: 'About', params: { focus: 'about' }}">
@@ -198,7 +202,7 @@ section.splash {
     text-align: left;
     &.cta {
       background: none;
-      margin-top: calc(var(--tracking-large) * 5);
+      margin-top: calc(var(--tracking-large) * 4);
       @media (max-width: 460px) {
         margin-top: calc(var(--tracking-large) * 2);
       }
