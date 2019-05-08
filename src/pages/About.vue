@@ -65,11 +65,14 @@ import iconEconomy from "../assets/images/icons/pirate_economy.svg";
 
 // Crew
 import ulysses from "../assets/images/crew/valparaiso-crew-ulysses.jpg";
+import dan from "../assets/images/crew/dan.jpg";
 import david from "../assets/images/crew/valparaiso-crew-dave.jpg";
-import ramiro from "../assets/images/crew/Ramiro_Ramirez_crew.jpg";
 import lyvia from "../assets/images/crew/valparaiso-crew-lyvia.jpg";
 import jen from "../assets/images/crew/valparaiso-crew-jennie.jpg";
-import yoram from "../assets/images/crew/yoram.jpeg";
+import oksanka from "../assets/images/crew/oksanka.jpg";
+import veronika from "../assets/images/crew/veronika.jpg";
+import ramiro from "../assets/images/crew/Ramiro_Ramirez_crew.jpg";
+
 
 export default {
   name: "About",
@@ -93,14 +96,29 @@ export default {
         title: "Captain - Founder - Youth Leader - European Co-ordinator",
       },
       {
-        image: david,
-        name: "Dave Dega",
-        title: "App Developer",
+        image: dan,
+        name: "Dan Gibbon-Walsh",
+        title: "Marketing - Communications - Strategy - Branding"
       },
       {
         image: jen,
         name: "Jennie Hughes",
         title: "Treasurer",
+      },
+      {
+        image: oksanka,
+        name: "Oksanka Tykhovska",
+        title: "Youth Trainer - European Project Manager",
+      },
+      {
+        image: david,
+        name: "Dave Dega",
+        title: "App Developer",
+      },
+      {
+        image: veronika,
+        name: "Veronika Hozjan",
+        title: "Graphic Designer"
       },
       {
         image: lyvia,
