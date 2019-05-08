@@ -113,7 +113,7 @@ export default {
       {
         day: "March",
         year: "2018",
-        title: "Started the development of the Pirat App",
+        title: "Started the development of the Pirate App",
         description: "To be delivered by 2020, the aim is to connect people through goods, stories and skills, and show that everything has more worth than just money. We are looking for programmers, copywriters, funders and ambassadors to help deliver our goal, so get in touch if you want to be part of this exciting international work and shape the future of the New Pirate Economy.",
         image: pirateApp
       },
