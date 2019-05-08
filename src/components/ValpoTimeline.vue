@@ -31,6 +31,8 @@ import freedom from "../assets/images/timeline/freedom-festival.jpg";
 import france from "../assets/images/timeline/france.jpg";
 import trade from "../assets/images/timeline/pirate-economy-trade.jpg";
 import newboat from "../assets/images/timeline/new-bote.jpg";
+import pirateApp from "../assets/images/timeline/pirate_app.jpg";
+import trainings from "../assets/images/timeline/trainings_1.jpg";
 
 
 export default {
@@ -109,6 +111,20 @@ export default {
         image: trade
       },
       {
+        day: "March",
+        year: "2018",
+        title: "Started the development of the Pirat App",
+        description: "To be delivered by 2020, the aim is to connect people through goods, stories and skills, and show that everything has more worth than just money. We are looking for programmers, copywriters, funders and ambassadors to help deliver our goal, so get in touch if you want to be part of this exciting international work and shape the future of the New Pirate Economy.",
+        image: pirateApp
+      },
+      {
+        day: "Sep",
+        year: "2018",
+        title: "Began delivering Youth Exchanges",
+        description: "In response to the growing youth unemployment rates across Europe, and the need to create new skills to equip younger generations with the future skills we need, Adventures of the Valparaiso is now delivering Youth Exchanges. We work with youth workers and young adults to help give them skills in a relaxed setting that they cannot otherwise access. To deliver trainings, become a youth exchange partner, or to find out more, email trainings@adventuresofthevalparaiso.com",
+        image: trainings
+      },
+      {
         day: "Sep",
         year: "2021",
         title: "First Journey with the New Boat",
@@ -123,7 +139,7 @@ export default {
 <style lang="scss" scoped>
 
 // You have to manually define the amount of items in the timeline !!
-$items: 11;
+$items: 13;
 
 /* Media Queries */
 
