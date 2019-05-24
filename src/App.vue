@@ -7,6 +7,7 @@
     <router-view/>
     <valpo-partners/>
     <valpo-footer v-if="$_config.site.mode === 1"></valpo-footer>
+    <cookie-law theme="base"></cookie-law>
   </div>
 </template>
 
@@ -14,10 +15,11 @@
 import ValpoTopBar from "@/components/ValpoTopBar";
 import ValpoFooter from "@/components/ValpoFooter";
 import ValpoPartners from "@/components/ValpoPartners";
+import CookieLaw from 'vue-cookie-law';
 
 export default {
   name: "Site",
-  components: { ValpoFooter, ValpoTopBar, ValpoPartners }
+  components: { ValpoFooter, ValpoTopBar, ValpoPartners, CookieLaw }
 };
 </script>
 
